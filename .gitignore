@@ -1,0 +1,19 @@
+# Downloaded battery datasets — fetched from OSF / Mendeley
+# Reproduction instructions: see Battery/data/00_download_summary.md
+Battery/data/*
+!Battery/data/00_download_summary.md
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
