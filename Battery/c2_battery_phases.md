@@ -147,7 +147,13 @@ Total: **16 cells across 3 triads.** Heterogeneity becomes a strength of the ope
 **Purpose:** Test the second half of the (revised) C2 claim: the **cross-operator disagreement pattern** identifies the degradation mode, beyond what any single operator's intra-modal signature provides. This is the bridge to C3.
 
 **Tasks:**
-- 4.1 ⚠️ **First held-out cohort result (Khan 2025, N=19): PRIMARY FALSIFICATION CRITERION FAILED.** Pre-registered classifier (cosine-similarity to LLI / LAM+SEI centroids, confidence threshold 0.3) yielded only 3/19 confident classifications vs ≥10/19 required. Permutation null p = 1.000. Direction of disagreement preserved (every cell triggers onset, all in negative-Q_max half-space), but cluster separation as pre-specified does not generalize to prismatic NMC/graphite cells. See [literature/13_phase4_khan_result.md](literature/13_phase4_khan_result.md). Zhang Cambridge + WMG cohorts pending — Zhang has explicit aging-mode labels for direct validation. The N=4 V4-vs-W exploratory pattern was over-specified; pre-reg correctly caught the over-fitting.
+- 4.1 ⚠️ **Multi-cohort verdict (2026-05-21):**
+  - **Khan 2025 (N=19, independent NMC/graphite): FAIL** — 3/19 confidently classified, permutation p=1.0 [literature/13_phase4_khan_result.md](literature/13_phase4_khan_result.md)
+  - **SECL first-life β (N=3, independent NMC/Si-graphite, HPPC operators): PARTIAL PASS** — 2/3 confidently classified (66.7%), meets ≥50% threshold but N too small for definitive verdict [literature/14_phase4_secl_holdout_zhang.md](literature/14_phase4_secl_holdout_zhang.md)
+  - **SECL second-life γ (N=4 same-cell non-independent):** Longitudinal consistency confirmed — V4 stays LLI both lifecycles, W8 stays LAM+SEI both lifecycles. NOT a confirmatory test; supports cell-level residual-direction signature is real.
+  - **Zhang Cambridge (N=8, independent LCO/graphite): INVALID** — Q_max extraction degenerate because Zhang EIS cycle-numbers don't index into the aging-cycle timeline of the capacity files. Per-state cycle alignment needed before pre-reg verdict possible.
+  - **WMG 25-cell:** still pending Mendeley UI download.
+  - **Net so far:** Phase 4 second-claim not confirmed at pre-reg protocol on the largest held-out cohort. Mode-classification claim sits on shaky empirical ground.
 - 4.2 — Use the EIS frequency sweep as a within-modality operator decomposition: high-frequency (ohmic), mid-frequency (charge transfer), low-frequency (diffusion). Each frequency band acts as a sub-operator.
 - 4.3 — Map operator-disagreement patterns to known degradation pathways: LLI (lithium inventory loss), LAM (active material loss), SEI growth, lithium plating, separator degradation.
 - 4.4 — Cross-validate classification across datasets where possible.
