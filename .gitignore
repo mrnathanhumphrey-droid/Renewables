@@ -2,6 +2,9 @@
 # Reproduction instructions: see Battery/data/00_download_summary.md
 Battery/data/*
 !Battery/data/00_download_summary.md
+!Battery/data/khan_2025/
+Battery/data/khan_2025/*
+!Battery/data/khan_2025/cell_conditions.csv
 
 # Python
 __pycache__/

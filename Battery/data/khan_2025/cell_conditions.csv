@@ -1,0 +1,25 @@
+cell,aging_type,T_C,soc_range,charge_rate,discharge_rate,voltage_limits,notes
+S1,calendar,40,100,,,4.2,storage at 100% SOC
+S3,calendar,0,100,,,4.2,storage at 100% SOC
+S4,calendar,40,80,,,4.1,storage at 80% SOC
+S8,calendar,25,80,,,4.1,storage at 80% SOC
+S9,calendar,0,80,,,4.1,storage at 80% SOC
+S6,cycle,25,0-100,0.2C-CCCV,1C-CC,2.5-4.2,
+S15,cycle,25,0-80,0.2C-CCCV,1C-CC,2.5-4.1,
+S16,cycle,25,10-90,0.2C-CCCV,1C-CC,3.0-4.15,
+S17,cycle,25,0-100,1C-CC,1C-CC,2.5-4.2,
+S19,cycle,25,10-90,1C-CC,1C-CC,2.5-4.15,
+S7,cycle,40,0-100,0.2C-CCCV,1C-CC,2.5-4.2,
+S20,cycle,40,10-90,0.2C-CCCV,1C-CC,2.5-4.1,
+S21,cycle,40,0-80,0.2C-CCCV,1C-CC,3.0-4.15,
+S22,cycle,40,0-100,1C-CC,1C-CC,2.5-4.2,
+S23,cycle,40,0-80,1C-CC,1C-CC,2.5-4.1,
+S24,cycle,40,10-90,1C-CC,1C-CC,3.0-4.15,
+S5,cycle,0,0-100,0.2C-CCCV,1C-CC,2.5-4.2,
+S10,cycle,0,0-80,0.2C-CCCV,1C-CC,2.5-4.1,
+S11,cycle,0,10-90,0.2C-CCCV,1C-CC,3.0-4.15,
+S12,cycle,0,0-100,1C-CC,1C-CC,2.5-4.2,
+S13,cycle,0,0-80,1C-CC,1C-CC,2.5-4.1,
+S14,cycle,0,10-90,1C-CC,1C-CC,3.0-4.15,
+S2,excluded,,,,,,measurements only through Day 20
+S18,excluded,,,,,,measurements only through Day 40
