@@ -11,11 +11,12 @@ Per-cell features:
   Median unit-norm residual-direction vector at flagged RPTs/sweeps.
   Three operators: (Q_max, R_ohmic, R_diff), consistent across alpha/gamma/Khan/Zhang.
 
-Cohorts (N=37 total across 3 chemistry-form-factor groups):
+Cohorts (4 chemistry-form-factor groups):
   SECL alpha + gamma: NMC/Si-graphite cylindrical, N=10 trajectories
     (4 first-life alpha + 6 second-life gamma)
   Khan 2025: NMC/graphite prismatic, N=19
   Zhang Cambridge v2: LCO/graphite button (LR2032), N=8
+  WMG 25-cell (Rashid 2023): NMC811/graphite 21700 cylindrical, N=19 (cross-sectional)
 
 Hierarchical model:
   u[i] = unit residual direction for cell i (3-vector)
@@ -116,6 +117,30 @@ def get_khan_units():
     return pd.DataFrame(units)
 
 
+def get_wmg_units():
+    """Load pre-computed WMG residual unit vectors.
+
+    WMG is cross-sectional aging: each cell terminates at one SOH stage.
+    Residual direction comes directly from (z_Q_max, z_R_ohmic, z_R_diff) at
+    the cell's terminal SOH, standardized vs the 5 100SOH controls. No
+    per-cell trajectory + per-RPT flagging step needed (one observation per cell).
+
+    See code/wmg_extract_features.py.
+    """
+    path = OUT_DIR / "wmg_25cell_classification.parquet"
+    if not path.exists():
+        return pd.DataFrame()
+    df = pd.read_parquet(path)
+    units = []
+    for _, r in df.iterrows():
+        units.append({"cell_traj": f"WMG_Cell{int(r['cell']):02d}",
+                      "chem": "NMC811_cyl",
+                      "u1": float(r["u_Q_max"]),
+                      "u2": float(r["u_R_ohmic"]),
+                      "u3": float(r["u_R_diff"])})
+    return pd.DataFrame(units)
+
+
 def get_zhang_units():
     """Median unit residual from Zhang v2 features parquet."""
     df = pd.read_parquet(OUT_DIR / "zhang_features_v2.parquet")
@@ -171,10 +196,12 @@ def main():
     secl = get_secl_alpha_gamma_units()
     khan = get_khan_units()
     zhang = get_zhang_units()
+    wmg = get_wmg_units()
     print(f"  SECL  alpha+gamma (NMC/Si-graphite cylindrical): N={len(secl)}")
     print(f"  Khan  2025        (NMC/graphite prismatic):      N={len(khan)}")
     print(f"  Zhang v2          (LCO/graphite button):         N={len(zhang)}")
-    all_units = pd.concat([secl, khan, zhang], ignore_index=True)
+    print(f"  WMG   25-cell     (NMC811/graphite 21700 cyl):   N={len(wmg)}")
+    all_units = pd.concat([secl, khan, zhang, wmg], ignore_index=True)
     print(f"  Total: N={len(all_units)}\n")
 
     print("=== Cohort-level mean residual direction (raw) ===")
@@ -183,7 +210,7 @@ def main():
         mean_u_norm = mean_u / max(np.linalg.norm(mean_u), 1e-12)
         print(f"  {chem:15s} N={len(g):3d} mean unit = ({mean_u_norm[0]:+.3f}, {mean_u_norm[1]:+.3f}, {mean_u_norm[2]:+.3f})")
 
-    chems = ["NMC_cyl", "NMC_prism", "LCO_button"]
+    chems = ["NMC_cyl", "NMC_prism", "LCO_button", "NMC811_cyl"]
     chem_id = all_units["chem"].map(lambda c: chems.index(c)).values.astype(int)
     u_obs = all_units[["u1", "u2", "u3"]].values.astype(float)
     n_groups = len(chems)
@@ -228,7 +255,7 @@ def main():
 
     # Pairwise group separation
     print("\n=== Pairwise group-centroid cosine angle ===")
-    pairs = [(0,1), (0,2), (1,2)]
+    pairs = [(i, j) for i in range(n_groups) for j in range(i+1, n_groups)]
     for i, j in pairs:
         cos_angles = []
         for s in range(gm_flat.shape[0]):
