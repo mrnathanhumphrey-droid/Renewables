@@ -178,7 +178,7 @@ This is the cancer-substrate honest-conditional framing applied to the battery s
 
 ---
 
-**Locked at commit (to be recorded after push):** _TBD_
+**Locked at commit:** `d3b1662` on `main`, pushed to `origin/main` 2026-05-22.
 
 Companion documents:
 - literature/27 (operator catalog pre-reg, commit `13e9f80`)

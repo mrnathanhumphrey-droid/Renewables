@@ -1,21 +1,7 @@
 # Next Session — Pickup Pointer
 
-**Locked:** 2026-05-22 (commit 2ffb513 on `main`)
-**Last session ended:** Paper 2 selection collapsed to INVALID per strict pre-reg; methodological negative result documented at literature/29. User then directed a diagnostic-driven amendment (NOT a result-driven re-run) and asked to compact first.
-
----
-
-## Next session goal (in order)
-
-1. **File literature/30 — Paper 2 Gate I diagnostic-driven amendment.** Replace CV-based dispersion with category-specific stability tests:
-   - **Slope-like operators** (T1, T2, T3, T4, T5, C1, CE1 — trajectory + ratio operators where mean-near-zero is a real possibility): **rank-based stability test**. Per cohort: bootstrap the cell-level operator values, count fraction of bootstrap replicates where the rank-correlation of cells against any external covariate (e.g., design-condition labels, or just bootstrap-vs-bootstrap rank-correlation) exceeds a threshold. Concrete rule: "operator is rank-stable if Spearman rank correlation of original vs bootstrap re-sampled values > 0.50 in median across 1000 bootstraps."
-   - **Level-like operators** (E1, E2, E3, C2, D1 — fresh-state or EIS-spectral values where mean is well-separated from zero): keep CV<0.30 OR fall back to IQR/|median|<0.30 if mean is near zero.
-2. **Log the amendment in literature/28 §10** with full reasoning: CV pathology is real (mean-near-zero is a known statistical issue, not a result-driven excuse), category-specific tests are more principled than blanket-relaxing CV threshold, IQR/|median| has the same pathology if medians cross zero.
-3. **Re-run Gate I under amended protocol.** Expected outcome: 4-7 operators survive, mixed across trajectory and spectral families. If 0 survive again, that's a substantive finding — the framework's operators don't pass any reasonable cross-cohort test.
-4. **Then Gate II as originally planned** on whatever survives. Cascade if multi-operator survivors emerge.
-5. **Document everything as protocol evolution** in literature/31 (Paper 2 v2 result): original pre-reg → CV pathology identified at literature/29 → diagnostic-driven amendment at literature/30 → re-run → final result. Pattern mirrors the cancer substrate's "Δ=+6.26 nats CI-off-zero-but-Gibbs-contingent" honest-conditional documentation.
-
-The user's exact framing: "diagnostic-driven, not result-driven. The integrity comes from the logging, not from refusing to amend."
+**Locked:** 2026-05-22 (commit `d3b1662` on `main`)
+**Last session ended:** Paper 2 dual-result published. Strict-pre-reg verdict (literature/29) PAPER 2 INVALID stands. Amended-protocol verdict (literature/31) PAPER 2 PARTIAL REPLICATION via diagnostic-driven Gate I amendment (literature/30) + 7-operator RF cascade with PRIMARY PyBaMM-holdout F=57.26, p=0.0001, SECONDARY WMG vacant.
 
 ---
 
@@ -23,65 +9,48 @@ The user's exact framing: "diagnostic-driven, not result-driven. The integrity c
 
 | Component | Status | Commit |
 |---|---|---|
-| Phase 0 (lit + decision memo) | LOCKED | early-session commits |
-| Phase 1 (dataset inventory + power calc + disposition) | LOCKED | early-session |
-| Phase 2 (PPC, conditional null, Option X1) | LOCKED | early-session |
-| Phase 3 (lead-time N=7 frequentist + Bayesian) | LOCKED | early-session |
-| Phase 4 (multi-cohort held-out, Khan FAIL + SECL-β PARTIAL + Zhang v2 PASS) | LOCKED | early-session |
-| C1 cross-chemistry hierarchical (3 groups) | LOCKED | 505284f |
-| C1 cross-chemistry hierarchical (4 groups, +WMG) | LOCKED | ce400df |
-| Second-life days-axis null | LOCKED | 44ece58 |
-| C3 Probe 1 (Khan exploratory, SOC range hit) | LOCKED | a388308 |
-| C3 pre-reg for Probes 2+3 | LOCKED | 1ef1b94 |
-| C3 Probe 2 (Severson H2 PASS pooled, partial within-batch) | LOCKED | ed997e8 |
-| C3 Probe 3 (WMG H3 NULL by p, F above floor) | LOCKED | ed997e8 |
-| C3 Probe 4 pre-reg (PyBaMM synthetic material-design) | LOCKED | d03a558 |
-| C3 Probe 4 (H4 STRONG SUPPORT, 2/3 design params PASS) | LOCKED | 399e572 |
-| C3 Probe 2 amendment pre-reg (Severson alt-axes) | LOCKED | 3fb179a |
-| C3 Probe 2v2 (alt-axes H5 WEAK; partial-batch is axis-general) | LOCKED | 9e87966 |
-| C3 Probe 5 pre-reg (PyBaMM uniform aging) | LOCKED + amendment | 93e4f03 + e3b12c6 |
-| C3 Probe 5 (H6 SUPPORTS Probe 4 ROBUSTNESS; 3/3 PASS) | LOCKED | dda4bdc |
-| C3 Probe 6 pre-reg (noise injection threshold test) | LOCKED | 4a3e932 |
-| C3 Probe 6 (H7 SUPPORTS NOISE EXPLANATION; threshold at typical academic noise) | LOCKED | 6fc2d92 |
-| Paper 2 operator catalog pre-reg | LOCKED | 13e9f80 |
-| Paper 2 selection pre-reg + §6 amendment | LOCKED | 7fae62a + 153fbd3 |
-| **Paper 2 selection result (INVALID per strict pre-reg)** | **LOCKED** | **2ffb513** |
-| Paper 2 v2 amendment (Gate I diagnostic-driven) | **NEXT** | — |
-| Paper 2 v2 re-run + writeup | NEXT | — |
+| Phase 0-4 + C1 + C2 + 6 C3 Probes (Paper 1) | LOCKED | 2ffb513 base |
+| Paper 2 operator catalog pre-reg (literature/27) | LOCKED | 13e9f80 |
+| Paper 2 selection pre-reg + §10 amendments | LOCKED | 7fae62a + 153fbd3 + 3ad6c5c |
+| Paper 2 strict-pre-reg result (INVALID, literature/29) | LOCKED | 2ffb513 |
+| Paper 2 Gate I diagnostic-driven amendment (literature/30) | LOCKED | 3ad6c5c |
+| **Paper 2 amended-protocol result (PARTIAL REPLICATION, literature/31)** | **LOCKED** | **d3b1662** |
 
-## Paper 2 result detail (literature/29) for context
+The Paper 2 narrative is closed for now: both pre-reg-honest verdicts are published, audited, and pushed. The methodological lesson (blanket dispersion metrics are ill-suited to mixed slope-and-level catalogs; category-stratify ex ante) is in the corpus.
 
-- 12 candidates → Gate I → 1 (E1 only)
-- 1 candidate → Gate II → 0 (E1 only computable on Khan; can't pass 2-of-3 cohort rule)
-- Cascade INVALID per pre-reg §7
+## Open follow-ups (NOT pre-registered)
 
-CV-based Gate I dropped 11 of 12. Most attrition driven by:
-- **CV pathology** on near-zero-mean trajectory operators (T1-T5, C1)
-- **Data unavailability** for E3, CE1, D1 (extraction infra gaps)
-- Genuine cross-cohort instability for some operators
+1. **Tighter rank-stability threshold.** The locked ρ_median ≥ 0.50 turned out to be far below the empirical floor (0.994-1.000). A future Paper-2-equivalent pre-reg could lock ρ_median ≥ 0.85 or use split-half rank concordance. Document as Paper 3 design consideration.
 
-E1 had AUC=1.000 on Khan (perfect aging-condition separation) but failed Gate II because PyBaMM and Severson lack EIS data.
+2. **WMG cross-substrate generalization.** Under the current §10 first amendment, WMG SECONDARY is vacant because no E1-E3 survived Gate II. A new pre-reg broadening the WMG restriction to "any EIS-derived survivor" (which would admit C2) would let WMG SECONDARY run. This must be a NEW pre-reg, locked before any C2-on-WMG analysis touches the data with PERMANOVA. The exploratory C2 stats in literature/31 §5 (mean 0.929, sd 0.025, range [0.872, 0.971], soh_eis range 80-95%) are descriptive only.
 
-## Pattern of documentation to follow (per user direction)
+3. **Paper 2 noise-injection analog (Probe-6-style for cascade).** Test cascade-robustness under instrumentation noise (Probe 6 demonstrated 0.5% Q / 15% R_DC / 20% R_total noise collapses Paper 1 trajectory PERMANOVAs). Same noise injection on amended cascade: does F=57.26 survive? Pre-register first.
 
-The user explicitly cited the cancer substrate's "Δ=+6.26 nats CI-off-zero-but-Gibbs-contingent" documentation as the model — conditional, honest, fully audited. The amendment in literature/30 + re-run + writeup at literature/31 should:
+4. **True cross-substrate cascade.** Train on PyBaMM-train + Khan + Severson; validate on a real-cell substrate OTHER than the training cohorts (e.g., a future SECL second-life slice, or a new cohort). This would be the cleanest test of the framework's real-world claim. Substrate not yet identified.
 
-1. **Open with the diagnostic.** What was wrong with Gate I as locked? CV near-zero-mean pathology.
-2. **State the amendment with explicit before/after text.** Slope-like operators get rank-based stability; level-like keep CV.
-3. **Justify category-specific over blanket-relaxation.** IQR/|median| has same pathology; trajectory vs spectral operators are statistically different beasts.
-4. **Re-run and report,** with attrition tracked alongside the original Gate I result for transparency.
-5. **Frame as protocol evolution,** NOT as "Gate I was wrong so we changed it to make things pass."
+5. **Cross-paper integration writeup.** Paper 1 (independence-framework) + Paper 2 (noise-robust cascade) side-by-side methodology paper. How the framework evolves from independence-Mahalanobis to RF-cascade when the operator catalog becomes mutually coupled.
 
-## Outstanding items NOT covered above
-
-- Paper 2 noise-injection analog of C3 Probe 6 (test cascade's noise robustness if cascade emerges)
-- Paper 2 + Paper 1 cross-comparison writeup
-- Methodology corpus paper integrating the C2 battery substrate alongside sports / SPX / cancer / hydrology / gun violence
-
-These are NEXT-NEXT-session work.
+6. **Methodology corpus integration.** Battery substrate alongside sports / SPX / cancer / hydrology / gun violence in the cross-substrate paper.
 
 ## Repo state
 
-Branch `main` at `2ffb513`. Push to `origin/main` synced. WMG, Severson FastCharge.zip, all parquets present in `data/`. All code in `code/`. All literature in `literature/00`–`literature/29`.
+Branch `main` at `d3b1662`. Push to `origin/main` synced. All literature 00-31 present. All code in `code/`. All parquets in `data/processed/` (gitignored). New artifacts from this session:
 
-Total commits in this session lineage: 12+ (from `505284f` C1 onward through `2ffb513` Paper 2 INVALID).
+- `code/paper2_gate_I_v2.py` — amended Gate I (rank-stability + CV/IQR fallback)
+- `code/paper2_gate_II_v2.py` — Gate II on amended survivors (logic unchanged from v1)
+- `code/paper2_cascade_v2.py` — RF cascade + PCA embedding + PERMANOVA on PyBaMM-holdout PRIMARY + WMG SECONDARY (vacant)
+- `literature/30_paper2_gate_I_amendment.md` — diagnostic-driven amendment with falsification-resistance check
+- `literature/31_paper2_amended_result.md` — dual-result protocol-evolution document
+- `data/processed/paper2_gate_I_v2_results.parquet`
+- `data/processed/paper2_gate_II_v2_results.parquet`
+- `data/processed/paper2_cascade_v2_summary.pkl`
+- `data/processed/paper2_cascade_v2_importances.parquet`
+
+## Key result numbers (for citation)
+
+- Amended Gate I: 8 of 12 operators survive (T1-T5, C1, C2, E1)
+- Amended Gate II: 7 of 8 (E1 fails cohort-coverage; T1-T5 + C1 + C2 survive)
+- Cascade 5-fold OOF accuracy: 0.684 (chance = 1/14 ≈ 0.071)
+- PRIMARY PERMANOVA (PyBaMM-holdout, n=36): F=57.26, p=0.0001 → PASS
+- Dominant cascade operators: C2 (27%), T1 (20%), T4 (16%), T5 (14%), T2 (12%)
+- Verdict: PAPER 2 PARTIAL REPLICATION (PRIMARY PASS; SECONDARY vacant)
