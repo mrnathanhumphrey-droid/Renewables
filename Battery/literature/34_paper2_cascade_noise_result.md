@@ -97,4 +97,4 @@ For methodology-corpus integration:
 
 ---
 
-**Locked at commit (to be recorded after push):** _TBD_
+**Locked at commit:** `273be36` on `main`, pushed to `origin/main` 2026-05-22.
