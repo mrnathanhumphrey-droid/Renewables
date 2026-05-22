@@ -55,13 +55,21 @@ now been probed across 3 cohorts:
    radius NULL (centroids essentially identical). **H4 STRONG SUPPORT** per
    pre-reg §8. First validation of C3's material-design inversion claim on
    data where ground truth is known. (literature/19 pre-reg, literature/20 result)
+7. **C3 Probe 2 amendment (Severson alternative design axes, pre-registered)** —
+   3 alt axes (last-step C-rate, SOC handoff, severity score) tested per
+   literature/21. All 3 show the same pattern as first-step C-rate: pooled
+   signal exists for 2 of 3, but Batch 2 within-batch fails on ALL 3.
+   **H5 WEAK** per pre-reg §6. The partial-batch failure in Probe 2 is
+   axis-general (cohort property), not axis-specific. Exposes a possible
+   aging-magnitude × design-condition interaction concern in real cohorts.
+   (literature/22)
 
-Joint C3 verdict across all 4 probes: **material-design inversion machinery
-works on synthetic ground-truth (Probe 4); operating-condition inversion is
-partially replicated on real cohorts (Probes 1+2) with mixed within-batch
-behavior and some underpower (Probe 3). Real-cohort limitations look
-cohort-specific, not framework-failures.** Promoting C3 to paper-ready
-claim is now an experimental-design question, not a methodology question.
+Joint C3 status across all 5 pre-registered analyses: **synthetic-validated
+on ground truth (Probe 4 STRONG SUPPORT); real-cohort mixed (Probe 2 PASS
+pooled but partial-batch is axis-general per Probe 2v2; Probe 3 underpower).**
+Promoting C3 to paper-ready claim requires either (a) experimental cohort
+with controlled aging extent, or (b) framework amendment handling
+aging-extent × design-condition interactions on real data.
 
 ## Current state (2026-05-21)
 
@@ -81,6 +89,8 @@ claim is now an experimental-design question, not a methodology question.
 | C3 probe 3 (WMG within-cohort, framework coherence) | LOCKED — H3 NULL by p, effect size above floor (underpower) | literature/18 |
 | C3 pre-reg probe 4 (PyBaMM synthetic, locked) | LOCKED | literature/19, commit d03a558 |
 | C3 probe 4 (PyBaMM material-design synthetic) | LOCKED — **H4 STRONG SUPPORT** (2/3 design params PASS: cathode thickness F=12.4 p=0.003; transference F=50.6 p=0.0001; particle radius NULL) | literature/20 |
+| C3 probe 2 amendment pre-reg (Severson alt-axes) | LOCKED | literature/21, commit 3fb179a |
+| C3 probe 2v2 (Severson alt-axes result) | LOCKED — **H5 WEAK**: last_step_C + severity POOLED-ONLY PASS (Batch 2 fails); soc_handoff NULL. Partial-batch failure is axis-general | literature/22 |
 
 ## Cohorts in the cross-chemistry C1 model
 
