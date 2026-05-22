@@ -113,6 +113,9 @@ instrumentation, not the methodology itself.
 | C3 probe 5 (PyBaMM uniform anchor result) | LOCKED — **H6 SUPPORTS PROBE 4 ROBUSTNESS**: all 3 params PASS (cathode F=7.2 p=0.017; transference F=23.9 p=0.0001; particle radius F=9.6 p=0.003 — was NULL in Probe 4). Magnitude-confound disconfirmed | literature/24 |
 | C3 probe 6 pre-reg (synthetic noise injection — real-cell-noise threshold test) | LOCKED | literature/25, commit 4a3e932 |
 | C3 probe 6 (noise injection result) | LOCKED — **H7 SUPPORTS NOISE EXPLANATION**: at Level 2 (typical academic 0.5% Q, 15% R_DC, 20% R_total), all 3 params COLLAPSE to NULL. Synthetic-real gap explained by instrumentation noise | literature/26 |
+| Paper 2 catalog pre-reg (12 candidates, 5 physics categories) | LOCKED | literature/27, commit 13e9f80 |
+| Paper 2 selection pre-reg (Gates I+II + cascade + holdout) + amendment | LOCKED | literature/28, commit 7fae62a + amendment 153fbd3 |
+| **Paper 2 selection result** | **LOCKED — PAPER 2 INVALID** per pre-reg §7. 12 → 1 (Gate I, E1 only) → 0 (Gate II). Methodological negative result: CV metric inappropriate for trajectory operators (mean-near-zero pathology); EIS-only operators can't pass cross-cohort coverage when synthetic+Severson lack EIS | literature/29 |
 
 ## Cohorts in the cross-chemistry C1 model
 
