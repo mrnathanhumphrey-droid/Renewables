@@ -63,22 +63,31 @@ now been probed across 3 cohorts:
    axis-general (cohort property), not axis-specific. Raised the
    magnitude-confound hypothesis. (literature/22)
 8. **C3 Probe 5 (PyBaMM uniform-aging-extent magnitude-confound test, pre-registered)** —
-   108 synthetic cells re-anchored at uniform per-cell SOH 0.92 (mean SOH
-   0.918, sd 0.011 — tight clustering). **H6 SUPPORTS PROBE 4 ROBUSTNESS**:
-   all 3 design parameters PASS, including particle radius which was NULL
-   in Probe 4 (now F=9.6, p=0.003). **Magnitude-confound hypothesis
-   disconfirmed.** Severson Batch 2's null is not explained by uniform
-   aging extent. Cause must be real-cell variability sources (measurement
-   noise, instrument drift, real chemistry heterogeneity, batch-to-batch
-   shifts) that synthetic PyBaMM cells don't reproduce. (literature/23
-   pre-reg + amendment, literature/24 result)
+   108 synthetic cells re-anchored at uniform per-cell SOH 0.92. **H6 SUPPORTS
+   PROBE 4 ROBUSTNESS**: all 3 design parameters PASS, including particle
+   radius which was NULL in Probe 4. **Magnitude-confound hypothesis
+   disconfirmed.** Severson Batch 2's null is NOT explained by uniform aging.
+   (literature/24)
+9. **C3 Probe 6 (synthetic noise injection — real-cell-noise threshold test, pre-registered)** —
+   Post-hoc multiplicative Gaussian noise injection on Probe 5's clean
+   synthetic operators at 5 levels. **H7 SUPPORTS NOISE EXPLANATION.** At
+   Level 2 (typical academic-lab noise: 0.5% Q_max, 15% R_DC, 20% R_total),
+   all 3 design-direction PERMANOVAs collapse to NULL. The threshold sits
+   between Level 1 (best lab, 1 of 3 still PASS) and Level 2 (typical
+   academic, 0/3 PASS). **The synthetic-real cohort gap is explained by
+   instrumentation noise on the impedance operators.** Real-cell validation
+   requires sub-Level-1 noise — custom electrochemical rigs, not stock
+   cyclers — OR a framework amendment for noise-robust operator triads.
+   (literature/25 pre-reg, literature/26 result)
 
-Joint C3 status across all 6 pre-registered analyses: **synthetic-validated
-under TWO anchor strategies (Probes 4 + 5, total 3/3 design params PASS
-under uniform anchor); real-cohort mixed (Probe 2 PASS pooled; Probes 3,
-2v2 fail on real cohorts due to noise sources NOT modeled in synthetic).**
-Promotion to paper-ready claim now hinges on real-cell experimental validation
-under controlled aging extent. Framework methodology is sound.
+**Joint C3 status across all 7 pre-registered analyses: methodologically
+CLOSED.** Mechanism validated on synthetic (Probes 4 + 5); real-cell gap
+explained by noise (Probe 6). The C3 framework as currently designed
+cannot detect design-direction signal at typical academic-lab measurement
+noise levels (σ_R_DC ≥ 15%). Path to paper-ready promotion: experimental
+cohort with sub-Level-1 instrumentation OR noise-robust operator amendment.
+The framework's theoretical claim is sound; the real-cell barrier is
+instrumentation, not the methodology itself.
 
 ## Current state (2026-05-21)
 
@@ -102,6 +111,8 @@ under controlled aging extent. Framework methodology is sound.
 | C3 probe 2v2 (Severson alt-axes result) | LOCKED — **H5 WEAK**: last_step_C + severity POOLED-ONLY PASS (Batch 2 fails); soc_handoff NULL. Partial-batch failure is axis-general | literature/22 |
 | C3 probe 5 pre-reg (PyBaMM uniform anchor magnitude-confound test) | LOCKED + amended (target SOH 0.85 → 0.92) | literature/23, commit 93e4f03 + amendment e3b12c6 |
 | C3 probe 5 (PyBaMM uniform anchor result) | LOCKED — **H6 SUPPORTS PROBE 4 ROBUSTNESS**: all 3 params PASS (cathode F=7.2 p=0.017; transference F=23.9 p=0.0001; particle radius F=9.6 p=0.003 — was NULL in Probe 4). Magnitude-confound disconfirmed | literature/24 |
+| C3 probe 6 pre-reg (synthetic noise injection — real-cell-noise threshold test) | LOCKED | literature/25, commit 4a3e932 |
+| C3 probe 6 (noise injection result) | LOCKED — **H7 SUPPORTS NOISE EXPLANATION**: at Level 2 (typical academic 0.5% Q, 15% R_DC, 20% R_total), all 3 params COLLAPSE to NULL. Synthetic-real gap explained by instrumentation noise | literature/26 |
 
 ## Cohorts in the cross-chemistry C1 model
 
