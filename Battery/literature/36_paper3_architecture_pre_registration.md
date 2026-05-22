@@ -210,3 +210,53 @@ Estimated compute spend: ~$5-30 on Modal (PyBaMM scale + potential re-runs).
 ---
 
 **Locked at commit:** `3b9e1d6` on `main`, pushed to `origin/main` 2026-05-22.
+
+---
+
+## 12. Addendum — Paper 3 v1 shelved 2026-05-22
+
+### Shelf state
+
+Work proceeded through pre-reg lock (`3b9e1d6`) + Path A scope adjustment (`88977c3`, §11 first deviation: dropped mechanics, 4-mode → 2-mode v1). PyBaMM 5000-cell synthetic generation **completed** (4909 cells successful, 98.2% yield) and labeled with {LLI, kinetic-R} fractions. Operator extraction on synthetic revealed an unanticipated catalog-coverage problem that gates v1 progress:
+
+| Catalog operator | Synthetic coverage | Reason for NaN |
+|---|---|---|
+| N90, N80, N90_to_N80_ratio | 53-83% | requires cell to cross 90/80% SOH threshold |
+| N_R_double, R_DC_fresh | 57-100% | computable from per-cycle R_DC |
+| IC_peak_low_height, IC_peak_high_height, IC_peak_low_shift | **0%** | generator did not save per-cycle V curves (no dV/dQ available) |
+| R_ohmic_fresh, R_charge_transfer_fresh | **0%** | PyBaMM DFN cycling does not produce EIS spectra |
+
+Net: 5 of 10 locked-catalog operators are NaN on synthetic. The five available operators are all cycle-count or fresh-R-DC based — highly correlated, measuring "aging extent" rather than distinguishing aging *mechanism*. The IC peak operators (3) and EIS operators (2) are precisely the ones that would mechanistically distinguish LLI from kinetic-R; without them, the cascade is likely to learn a 1-2 dimensional "general aging score" rather than the substrate-invariant mode decomposition that motivates Paper 3.
+
+Three resumption paths were considered:
+
+- **A. Train on 5 operators as-is.** Cheap; cascade likely degrades to aging-extent predictor; file §11 second deviation. Rejected: defeats the substrate-invariance claim.
+- **B. Re-run generator with per-cycle V-curve saving → recover IC peak operators.** ~1-2 hours of code + another Modal run ($50-100). Mechanistically distinguishes LAM-NE/LAM-PE proxies; net catalog becomes 8 of 10. Selected as the trajectory-forward path.
+- **C. Re-run with V-curves + PyBaMM EIS simulation at fresh + terminal.** Full 10-operator catalog. 2-5x compute, $100-200. v2 scope.
+
+**Decision (2026-05-22):** **shelf Paper 3 v1 at commit `88977c3`.** Not willing to spend another $50-100 in this session. Pivot to other work; resume Paper 3 when budget + bandwidth align.
+
+### Trajectory forward when Paper 3 resumes
+
+1. **Modify `code/paper3_pybamm_generator.py` to save per-cycle V + Q discharge curves** (e.g., 50 sample points per discharge step) in the `rpts_json` payload. Adds ~10x to parquet size (estimated ~500 MB at 5000 cells); acceptable for local storage.
+2. **Re-run the 5000-cell production** with the modified generator on Modal. Cost projected $50-100, time ~30-60 min wall clock at 100 parallel CPUs (same as v1's actual run).
+3. **Extend `code/paper3_extract_operators.py`** to compute dQ/dV from V + Q curves, detect peaks in the 3.5-3.7 V (low SOC) and 4.0-4.2 V (high SOC) windows, and produce IC_peak_low_height, IC_peak_high_height, IC_peak_low_shift per cell.
+4. **Validate IC peak operators against PyBaMM ground-truth LLI/kinetic-R** as a sanity check: high-LLI cells should show peak voltage shifts; high-kinetic-R cells should show peak height decreases.
+5. **Proceed with §9 steps 5-10**: cascade training (multi-output regression on LLI + kinetic-R, with noise-injection per §5), LOCO selection, real-cohort cascade application, IC + DRT cross-validation.
+
+If step 4 confirms IC peaks track the synthetic-truth modes, Paper 3 v1 is on track. If IC peaks fail to track modes (e.g., Yang2017 SEI doesn't generate the right voltage-shift signatures), then v1 needs a different physics model (likely DUALFOIL or PyBaMM with explicit lithium-plating + electrolyte loss) — a v2-scale redesign.
+
+### State preserved for resumption
+
+- **literature/36** (this document): architecture + §11 Path A deviation + §12 shelf addendum, all locked
+- **`code/paper3_pybamm_generator.py`** at `88977c3`: produces working 2-mode synthetic data (Chen2020 + Yang2017 SEI + IDAKLU); v2 will modify to save V-curves
+- **`code/paper3_extract_operators.py`** at `88977c3`: 5 working operators on synthetic + cohort stubs (Khan/Severson raw re-extraction TODO)
+- **`data/processed/paper3_pybamm_synthetic.parquet`** (gitignored, local-only): 4909 cells with mode-fraction labels; usable for v1.1 (5-operator cascade) without re-running generator if we decide to ship as aging-extent predictor instead of mode decomposition
+
+### Non-Paper-3 next-session pickup pointer
+
+When Paper 3 resumes, it lives in this addendum's §12.5. When the corpus pivots to other work, NEXT.md is updated to point at whatever the new active substrate is. Paper 3 v1 is not abandoned; it is paused pending budget alignment.
+
+---
+
+**Shelf addendum locked at commit (recorded after push):** _TBD_
