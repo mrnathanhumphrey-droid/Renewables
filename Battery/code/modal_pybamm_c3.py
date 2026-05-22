@@ -43,7 +43,7 @@ PARTICLE_RADIUS_ABS_M = [4.0e-6, 5.22e-6, 6.5e-6]
 
 CELLS_PER_CONDITION = 12
 RPT_CADENCE = 25
-MAX_CYCLES = 500
+MAX_CYCLES = 800  # bumped from 500 per pre-reg literature/23
 SOH_TERMINATION = 0.80
 
 
@@ -198,6 +198,9 @@ def simulate_cell(cond_idx: int, cell_idx: int):
         aged_SOH = aged_Q / fresh_Q
 
         th_lvl, tn_lvl, pr_lvl = L9_DESIGN[cond_idx]
+        # Save full per-cycle trajectory as JSON string for parquet compat
+        import json as _json
+        rpts_json = _json.dumps(rpts)
         return {
             "cond_idx": cond_idx,
             "cell_idx": cell_idx,
@@ -216,6 +219,7 @@ def simulate_cell(cond_idx: int, cell_idx: int):
             "aged_cycle": aged_cycle,
             "aged_SOH": aged_SOH,
             "partial_aging": partial,
+            "rpts_json": rpts_json,
             "error": None,
         }
     except Exception as e:
@@ -320,7 +324,8 @@ def main():
         for _, r in err_df.iterrows():
             print(f"    cond {r['cond_idx']} cell {r['cell_idx']}: {r['error']}")
 
-    out_path = "D:/Renewables/Battery/data/processed/pybamm_l9_results.parquet"
+    # Probe 5 uses _trajectories suffix so Probe 4's parquet isn't overwritten
+    out_path = "D:/Renewables/Battery/data/processed/pybamm_l9_trajectories.parquet"
     import os
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     df.to_parquet(out_path)
