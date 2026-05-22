@@ -2,7 +2,9 @@
 
 **Substrate:** Lithium-ion battery storage (public datasets, Path A scope)
 **Methodology corpus position:** Sixth substrate, slotting alongside sports / SPX options / cancer / hydrology / gun violence
-**Status:** PHASE 0 COMPLETE (2026-05-21). Decision = PROCEED to Phase 1 with narrowed claim. See [literature/01_phase0_decision_memo.md](literature/01_phase0_decision_memo.md) and [literature/00_phase0_lit_index.md](literature/00_phase0_lit_index.md).
+**Status (live as of 2026-05-21):** Phase 0–4 complete and locked. C1 cross-chemistry hierarchical pooling HIT (76.1% between-group variance on 4 groups). C2 disagreement-onset early-warning lead time direction-confirmed at N=7 sign test p=0.031. **C3 active.** Probe 1 (Khan within-cohort, exploratory) hit on SOC range. Probes 2 + 3 pre-registered (literature/16, commit `1ef1b94`); Probe 2 (Severson) **H2 PASS pooled** F=31.7 p=0.0001 with partial within-batch replication caveat; Probe 3 (WMG within-cohort) **H3 NULL by p**, effect size above floor (underpower failure). See README.md for the live state table.
+
+**Original Phase 0 entry status:** PHASE 0 COMPLETE (2026-05-21). Decision = PROCEED to Phase 1 with narrowed claim. See [literature/01_phase0_decision_memo.md](literature/01_phase0_decision_memo.md) and [literature/00_phase0_lit_index.md](literature/00_phase0_lit_index.md).
 
 **Terminology note:** The earlier draft used "differential" as the headline term. This word now collides with three established usages — (a) Bello 2025 "Differential SOH Metrics" (intra-modal optical), (b) Ding 2024 dP/dQ intra-pressure analysis, and (c) the standard IC/DV/DTV differential-analysis literature. Replaced throughout with "inter-operator disagreement onset" or "cross-modality timing inconsistency."
 

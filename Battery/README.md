@@ -33,8 +33,27 @@ Two layers of result:
    (95% CI [39.7%, 95.4%]). Group centroids point in distinguishable
    directions on the residual unit sphere. **C1 HIT.**
 
-C1 hitting is what opens **C3 — design-parameter inversion from operator
-residuals**, which is the actual deliverable of the program.
+C1 hitting opens **C3 — design-parameter / operating-condition inversion from
+operator residuals**, which is the actual deliverable of the program. C3 has
+now been probed across 3 cohorts:
+
+3. **C3 Probe 1 (Khan within-cohort, exploratory)** — SOC range / upper-voltage
+   cutoff separates Khan cycle-aged cells at pseudo-F = 8.79, p = 0.036
+   (10000 perms). Temperature does NOT separate the same cells (F=2.17,
+   p=0.272). Motivated the C3 pre-registration. (literature/15)
+4. **C3 Probe 2 (Severson within-cohort, pre-registered)** — pooled
+   PERMANOVA on N=139 cells across 3 batches: pseudo-F = 31.7, p = 0.0001
+   on first-step C-rate. **H2 PASS** per pre-reg §5. But batch-stratified
+   robustness check shows only 1 of 3 batches independently replicates;
+   pooled signal is partly batch-driven. (literature/17)
+5. **C3 Probe 3 (WMG within-cohort, pre-registered framework coherence)** —
+   pseudo-F = 5.30 (above 3.0 floor) but p = 0.067 — **H3 NULL** by strict
+   pre-reg, underpower-failure not signal-absence. (literature/18)
+
+Joint C3 verdict (pre-reg §5): not in the pre-reg's tier list cleanly.
+Honestly: design-parameter / operating-condition inversion is **partial and
+substrate-specific** — supported on some cohorts and operator triads,
+underpowered or batch-confounded on others.
 
 ## Current state (2026-05-21)
 
@@ -46,9 +65,13 @@ residuals**, which is the actual deliverable of the program.
 | Phase 3 (lead-time, N=7 frequentist + Bayesian) | LOCKED | literature/11, 12 |
 | Phase 4 (multi-cohort held-out classification) | LOCKED | literature/09 (pre-reg), 13 (Khan FAIL), 14 (SECL-β PARTIAL PASS, Zhang v2 PASS) |
 | C1 cross-chemistry hierarchical (3 groups) | LOCKED | commit 505284f |
-| C1 cross-chemistry hierarchical (4 groups w/ WMG) | LOCKED | this README's commit |
+| C1 cross-chemistry hierarchical (4 groups w/ WMG) | LOCKED | commit ce400df |
 | Second-life days-axis null | LOCKED | commit 44ece58 |
-| C3 design parameter inversion | NEXT | — |
+| C3 probe 1 (Khan within-cohort, exploratory) | LOCKED — SOC range hit, pseudo-F 8.79 p=0.036 | literature/15, commit a388308 |
+| C3 pre-registration (probes 2+3, locked) | LOCKED | literature/16, commit 1ef1b94 |
+| C3 probe 2 (Severson within-cohort) | LOCKED — H2 PASS pooled (F=31.7 p=0.0001) but partial within-batch replication | literature/17 |
+| C3 probe 3 (WMG within-cohort, framework coherence) | LOCKED — H3 NULL by p, effect size above floor (underpower) | literature/18 |
+| C3 PyBaMM synthetic probe (material-design dim) | NEXT | — |
 
 ## Cohorts in the cross-chemistry C1 model
 
