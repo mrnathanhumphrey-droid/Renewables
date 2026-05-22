@@ -49,11 +49,19 @@ now been probed across 3 cohorts:
 5. **C3 Probe 3 (WMG within-cohort, pre-registered framework coherence)** —
    pseudo-F = 5.30 (above 3.0 floor) but p = 0.067 — **H3 NULL** by strict
    pre-reg, underpower-failure not signal-absence. (literature/18)
+6. **C3 Probe 4 (PyBaMM synthetic material-design, pre-registered)** —
+   108 synthetic LGM50 cells in L9 Taguchi factorial; cathode thickness PASS
+   (F=12.37 p=0.003), transference number PASS (F=50.57 p=0.0001), particle
+   radius NULL (centroids essentially identical). **H4 STRONG SUPPORT** per
+   pre-reg §8. First validation of C3's material-design inversion claim on
+   data where ground truth is known. (literature/19 pre-reg, literature/20 result)
 
-Joint C3 verdict (pre-reg §5): not in the pre-reg's tier list cleanly.
-Honestly: design-parameter / operating-condition inversion is **partial and
-substrate-specific** — supported on some cohorts and operator triads,
-underpowered or batch-confounded on others.
+Joint C3 verdict across all 4 probes: **material-design inversion machinery
+works on synthetic ground-truth (Probe 4); operating-condition inversion is
+partially replicated on real cohorts (Probes 1+2) with mixed within-batch
+behavior and some underpower (Probe 3). Real-cohort limitations look
+cohort-specific, not framework-failures.** Promoting C3 to paper-ready
+claim is now an experimental-design question, not a methodology question.
 
 ## Current state (2026-05-21)
 
@@ -68,10 +76,11 @@ underpowered or batch-confounded on others.
 | C1 cross-chemistry hierarchical (4 groups w/ WMG) | LOCKED | commit ce400df |
 | Second-life days-axis null | LOCKED | commit 44ece58 |
 | C3 probe 1 (Khan within-cohort, exploratory) | LOCKED — SOC range hit, pseudo-F 8.79 p=0.036 | literature/15, commit a388308 |
-| C3 pre-registration (probes 2+3, locked) | LOCKED | literature/16, commit 1ef1b94 |
+| C3 pre-reg probes 2+3 (locked) | LOCKED | literature/16, commit 1ef1b94 |
 | C3 probe 2 (Severson within-cohort) | LOCKED — H2 PASS pooled (F=31.7 p=0.0001) but partial within-batch replication | literature/17 |
 | C3 probe 3 (WMG within-cohort, framework coherence) | LOCKED — H3 NULL by p, effect size above floor (underpower) | literature/18 |
-| C3 PyBaMM synthetic probe (material-design dim) | NEXT | — |
+| C3 pre-reg probe 4 (PyBaMM synthetic, locked) | LOCKED | literature/19, commit d03a558 |
+| C3 probe 4 (PyBaMM material-design synthetic) | LOCKED — **H4 STRONG SUPPORT** (2/3 design params PASS: cathode thickness F=12.4 p=0.003; transference F=50.6 p=0.0001; particle radius NULL) | literature/20 |
 
 ## Cohorts in the cross-chemistry C1 model
 
