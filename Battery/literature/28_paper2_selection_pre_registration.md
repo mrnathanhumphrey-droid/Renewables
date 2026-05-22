@@ -220,4 +220,12 @@ the cascade fails the holdout test. Paper 2's claim isn't "cascade works"
 
 | Date | Deviation | Rationale |
 |---|---|---|
-| (none yet) | | |
+| 2026-05-22 | **§6 PRIMARY/SECONDARY swap.** Original: WMG PRIMARY, PyBaMM-holdout SECONDARY (§6.1). Amended: **PyBaMM-holdout PRIMARY, WMG SECONDARY (descriptive cross-substrate check, restricted to EIS-spectral cascade subset).** | Implementation audit before extraction reveals WMG is snapshot-only (no per-cycle trajectory). If the trained cascade includes any trajectory operators (T1-T5) that survive Gate I+II selection, WMG cells cannot be scored — they don't have those features. PyBaMM-holdout (36 cells, deterministic seed split per §2) has all operator types and is fully untouched in selection or cascade training, making it a clean primary holdout. WMG retains value as a descriptive cross-substrate generalization check: we can apply only the EIS-spectral subset of cascade-surviving operators (E1-E3 survivors) to WMG and report whether the cascade-implied direction structure shows up. This amendment is filed BEFORE any extraction is run; no peeking has occurred. |
+
+**Old text (§6):** "Validation cohort: WMG NMC811 cylindrical, n=19 (literature/24 cohort)."
+**New text (§6, effective from this commit):** "Validation cohort: PyBaMM Probe 5 holdout split (36 cells, deterministic seed split per §2). Untouched in any selection step. Has all 12 candidate operator types extractable."
+
+**Old text (§6.1):** "Secondary validation on PyBaMM holdout. PyBaMM Probe 5 holdout (36 cells)... PERMANOVA on cascade embedding labeled by L9 condition."
+**New text (§6.1, effective from this commit):** "Secondary descriptive validation on WMG (n=19 NMC811 cyl). Cascade is restricted to its EIS-spectral surviving operator subset (whichever of E1, E2, E3 passed Gate I and II). Apply restricted cascade to WMG cells; project to PCA embedding; PERMANOVA on terminal SOH bins. This is a cross-substrate generalization check — does the cascade's signal show up on a cohort whose only commonality with the training cohorts is the EIS-spectral operator family? Report descriptively. Not used for §7 verdict gating."
+
+**§7 verdict update:** STRONG REPLICATION now means PyBaMM-holdout (§6 PRIMARY) PASS at p<0.025 AND F>3.0. WMG secondary result reported alongside but does NOT enter the verdict. Bonferroni adjustment: only 1 primary final test (PyBaMM-holdout PERMANOVA), so α = 0.05 not α/2. WMG descriptive test does not count toward Bonferroni.
