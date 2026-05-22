@@ -175,4 +175,10 @@ to ~50-100 MB. Manageable.
 
 | Date | Deviation | Rationale |
 |---|---|---|
-| (none yet) | | |
+| 2026-05-21 | §3 target SOH 0.85 → **0.92** | First execution at 0.85 returned H6 INVALID per §5 because 75.5% of cells (80/106) failed to reach 85% per-cell SOH within 800 cycles. PyBaMM's nominal `"80% capacity"` termination fires at 4.0 Ah of the nominal 5 Ah, which corresponds to ~83-95% per-cell SOH depending on the cell's fresh_Q. Cells with low-cathode-thickness (fresh_Q ≈ 4.2 Ah) hit 4.0 Ah at ~95% per-cell SOH, well above 0.85. The original guess in §3 ("0.85 should be achievable") was wrong. Relaxing to 0.92 is a level that the PyBaMM termination passes through for most cells. The amendment is filed BEFORE re-running with 0.92; no peeking at outcomes occurred between the H6 INVALID result and this amendment. The 0.85 result remains on record as the first attempt. |
+
+**Old text (§3):** "...closest to **0.85 per-cell SOH** (across ALL post-fresh cycles available)"
+**New text (§3, effective from this commit):** "...closest to **0.92 per-cell SOH** (across ALL post-fresh cycles available)"
+
+**Old text (§3 footnote):** "The choice of 0.85 (vs Probe 4's 0.80) is a deliberate target chosen because in Probe 4 most cells reached 87% SOH but few crossed 80% per-cell. 0.85 should be achievable for nearly all cells given the bumped 800-cycle ceiling."
+**New text (§3 footnote, effective from this commit):** "The original 0.85 target proved unachievable for >70% of cells under the bumped 800-cycle protocol (PyBaMM nominal termination fires at ~95% per-cell SOH for low-thickness conditions). 0.92 is chosen as a level the nominal termination passes through for most cells, providing a uniform-anchor opportunity. This is still meaningfully uniform across cells (vs Probe 4's wide spread 85-95% SOH at anchor)."
