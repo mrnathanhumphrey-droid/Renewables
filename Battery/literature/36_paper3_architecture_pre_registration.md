@@ -259,4 +259,4 @@ When Paper 3 resumes, it lives in this addendum's §12.5. When the corpus pivots
 
 ---
 
-**Shelf addendum locked at commit (recorded after push):** _TBD_
+**Shelf addendum locked at commit:** `e04c275` on `main`, pushed to `origin/main` 2026-05-22.
