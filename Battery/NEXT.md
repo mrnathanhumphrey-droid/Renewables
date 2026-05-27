@@ -5,22 +5,30 @@
 
 ---
 
-## Probe 7 v1 (2026-05-27 — EIS-triad noise-robustness test)
+## Probe 7 arc (2026-05-27 — EIS-triad noise-robustness)
 
 | Document | Verdict | Lock commit |
 |---|---|---|
-| literature/37 (pre-reg) | — | `771de3a` |
+| literature/37 (v1 pre-reg) | — | `771de3a` |
 | literature/38 (v1 result) | **PROBE 7 NULL** at Level 2: 0/3 EIS-triad PASS vs 0/3 HPPC baseline (P7_F4 reproduces literature/26). Operator triad does NOT carry noise rejection under B7 LAM-proxy. | `a5a6ba1` |
+| literature/39 (v2 pre-reg) | — | _to be set_ |
+| literature/40 (v2 result) | **PROBE 7 v2 PRIMARY NULL**: B5' cycling-read aged-EIS doesn't rescue Level-2 noise rejection either (0/3 at N1, 1/3 WEAK at N2). Fresh-state×N1 secondary 2/3 PASS LEVEL ROBUST (different test, different question). **The C3 noise sensitivity is architectural, not operator-extraction-driven.** | _to be set_ |
 
-**Path forward (per literature/37 §10):** Probe 7 v2 is the gating follow-up.
-v2 combines three planned variants in one pre-reg:
-- **B5** — true cycled-state EIS via time-domain AC injection at the cycling-solver terminal (replaces the B7 LAM-proxy that left R_ohmic_residual dead).
-- **N2** — EIS-instrument-realistic noise grid (σ_R_ohmic ≈ 1-3%, σ_R_diff ≈ 5-15%) replacing N1's HPPC-typical levels.
-- **Probe 7.3** — secondary fresh-state-feature PERMANOVA (R_ohmic_fresh is a 564× cathode-thickness discriminator on this cohort; would test "do design parameters affect fresh impedance," a different question from "does aging-direction inversion work").
+### v1 to v2 trajectory
 
-v2 is not yet pre-registered. Cost: ~10-15 min wall additional local compute (B5 adds ~100 sec sim per cell, mostly at low-frequency AC settling); no Modal spend.
+**v1 (B7 LAM-proxy):** Aged-state EIS modified active material volume fractions by per-cell Q-loss. Smoke comparison to v2 revealed B7 was off-target — PyBaMM Chen2020 + Yang2017 SEI doesn't actually change amvf during cycling; the real aging is SEI growth + porosity collapse. v1 result therefore conditional on an off-target proxy.
 
-**Earlier "Aggron" pre-reg draft (retracted, not committed):** its §1 motivation that "Probe 6 used marginal PERMANOVAs, joint will recover signal" was factually wrong — Probe 6 already runs the joint-vector cosine PERMANOVA on the C1 architecture (`code/c3_noise_injection.py` lines 183-194). The actual unanswered question was operator-triad choice, which Probe 7 v1 addressed and resolved as NULL.
+**v2 (B5' cycling-read state):** Aged-state EIS modified `Initial SEI thickness` and `Negative electrode porosity` to the values read from the cycling solution at the uniform-anchor cycle. R_diff growth ~27× stronger (mean residual 0.104 Ω vs B7's 0.0038 Ω). R_ohmic_residual |s/n| went from 5.3 → 32.5 (not dead, as v1 implied — porosity affects high-freq impedance via Bruggeman). **Despite cleaner aging extraction, primary B5'×N1 PERMANOVA still NULL at Level 2** (0/3 PASS). Confirms the architecture-level noise sensitivity.
+
+### Combined Probe 7 closure
+
+Three independent operator-extraction methodologies (HPPC, B7, B5') × five-level noise grid × four PERMANOVA architectures (residual×N1, residual×N2, fresh-state×N1, fresh-state×N2). The **only configuration that survives Level 2 academic noise is fresh-state features × N1** (R_ohmic_fresh's 746× cathode-thickness discriminator dominates), which tests "do design parameters affect fresh impedance" — different question from C3's aging-direction-inversion claim.
+
+**C3 framework status updated:** noise-rejection is not recoverable by operator-triad swap, even with corrected aging extraction. Future C3 work would need (a) architecture amendment to a non-residual / non-unit-vector / non-cosine PERMANOVA framework, (b) sub-Level-1 instrumentation per Probe 6 closure, or (c) a real-cell EIS cohort with design-varied conditions that doesn't currently exist in the corpus.
+
+No further Probe 7 versions planned.
+
+**Earlier "Aggron" pre-reg draft (retracted, not committed):** its §1 motivation that "Probe 6 used marginal PERMANOVAs, joint will recover signal" was factually wrong — Probe 6 already runs the joint-vector cosine PERMANOVA on the C1 architecture.
 
 ---
 
