@@ -5,6 +5,19 @@
 
 ---
 
+## Khan cross-substrate validation (2026-05-27 — amendment deployment gate)
+
+| Document | Verdict | Lock commit |
+|---|---|---|
+| literature/50 (pre-reg) | — | `a49c830` |
+| literature/51 (result) | **KHAN PARTIAL TRANSFER.** T_C PASSES (F=11.02, p=0.0008; F4 holdout 0.683 > floor 0.50); soc_range NULL (bimodal not three-clustered); charge_rate NULL. Amendment is real beyond synthetic, but operational domain narrowed to design parameters with direct fresh-state EIS signatures. | _to be set_ |
+
+**Implication:** the amended C3 architecture transfers to real-cell Khan for the design parameter most directly tied to EIS physics (temperature → Arrhenius ionic conductivity + diffusion shifts). It does NOT transfer to design parameters mediated through aging-mechanism mix (SOC window, charge rate).
+
+**Common cross-substrate pattern (synthetic + Khan):** amendment PASSES design parameters that directly shift fresh-state impedance (cathode thickness, particle radius on synthetic; T_C on Khan); FAILS parameters mediated through aging kinetics (transference on synthetic; soc_range + charge_rate on Khan).
+
+**RMD-SRC parent doc update (proposed, NOT auto-applied):** add Battery to Substrate Applications table as "Done — partial cross-substrate" per literature/51 §B.
+
 ## Probe 8c (2026-05-27 — projection decomposition)
 
 | Document | Verdict | Lock commit |
