@@ -121,5 +121,5 @@ Probe 8b closed: **DISTANCE METRIC NEUTRAL at L2.** Mahalanobis at L0 reveals tr
 ---
 
 **Lock metadata:**
-- 8b result commit: `<TBD — recorded in follow-up commit>`
+- 8b result commit: `82e706c`
 - Result parquet SHA-256: `1E64A3CAFD27D780AC15CC7570D0DF37DE2B4D1FD3A7DCD2FFEDF418F6DE8C93`

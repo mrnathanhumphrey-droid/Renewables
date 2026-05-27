@@ -10,7 +10,7 @@
 | Document | Verdict | Lock commit |
 |---|---|---|
 | literature/43 (8b pre-reg) | — | `c0fa935` |
-| literature/44 (8b result) | **DISTANCE METRIC NEUTRAL at L2.** Cosine, Euclidean, Mahalanobis all 2/3 PASS LEVEL ROBUST on variant (iv) feature space at L2. Cosine has highest F-values (th 14.3, pr 13.6). **Subsidiary positive:** Mahalanobis catches transference at L0 (F=4.14, p=0.0001 PASS) — real signal, but noise-fragile beyond Level 1. | _to be set_ |
+| literature/44 (8b result) | **DISTANCE METRIC NEUTRAL at L2.** Cosine, Euclidean, Mahalanobis all 2/3 PASS LEVEL ROBUST on variant (iv) feature space at L2. Cosine has highest F-values (th 14.3, pr 13.6). **Subsidiary positive:** Mahalanobis catches transference at L0 (F=4.14, p=0.0001 PASS) — real signal, but noise-fragile beyond Level 1. | `82e706c` |
 
 **Implication:** distance metric is NOT additionally load-bearing at PRIMARY noise. Feature-space (8a) remains the sole identified load-bearing component. C3 amendment recommendation (cosine + variant iv) stands unchanged.
 

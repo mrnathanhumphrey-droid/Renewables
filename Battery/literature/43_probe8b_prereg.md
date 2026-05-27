@@ -111,6 +111,6 @@ Cost: 0 new compute (analyzer-only on v2 parquet). ~3-5 min wall.
 ---
 
 **Lock metadata:**
-- Lock commit: `<TBD — recorded in follow-up commit>`
+- Lock commit: `c0fa935`
 - v2 parquet SHA-256 (reused): `7A03BCC9213F5939D4CE581C3AA77289356C122D1EB1F3782FBD417A053F79AA`
 - Analyzer script SHA-256: `93814AB7B650B12E7398D292EFD06C127232EFC6BC29DF7B989F8FC9A5F7F1B9` (`code/c3_probe8b_distance_metric.py`)
