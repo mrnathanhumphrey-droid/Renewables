@@ -10,7 +10,7 @@
 | Document | Verdict | Lock commit |
 |---|---|---|
 | literature/45 (8c pre-reg) | — | `139ac25` |
-| literature/46 (8c result) | **PROJECTION REDUCTION SAFE — and IMPROVES.** PCA-2 unit cosine at L2: **th F=21.24 (+49% vs full 6D), pr F=20.87 (+54%).** Strongest in entire decomposition arc. PCA-3 also improves (+37%/+27%). PC1=thickness axis, PC2=particle-radius axis (interpretable). Transference still NULL. | _to be set_ |
+| literature/46 (8c result) | **PROJECTION REDUCTION SAFE — and IMPROVES.** PCA-2 unit cosine at L2: **th F=21.24 (+49% vs full 6D), pr F=20.87 (+54%).** Strongest in entire decomposition arc. PCA-3 also improves (+37%/+27%). PC1=thickness axis, PC2=particle-radius axis (interpretable). Transference still NULL. | `d7c1f7f` |
 
 **Updated C3 amendment recommendation (combined 8a + 8c):**
 - Feature space: variant (iv) fresh+aged 6D stacked

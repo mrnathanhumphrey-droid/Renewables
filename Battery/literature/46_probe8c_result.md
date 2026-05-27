@@ -169,5 +169,5 @@ Probe 8d (test statistic — PERMANOVA vs RF vs logistic) remains as a separate 
 ---
 
 **Lock metadata:**
-- 8c result commit: `<TBD — recorded in follow-up commit>`
+- 8c result commit: `d7c1f7f`
 - Result parquet SHA-256: `787CB0A993CDD99D419F1493F8239DC36B652618A767A1EA66B6E53D8B195CEE`

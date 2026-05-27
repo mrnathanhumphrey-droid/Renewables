@@ -119,6 +119,6 @@ Cost: 0 new compute. ~3 min wall.
 ---
 
 **Lock metadata:**
-- Lock commit: `<TBD — recorded in follow-up commit>`
+- Lock commit: `139ac25`
 - v2 parquet SHA-256 (reused): `7A03BCC9213F5939D4CE581C3AA77289356C122D1EB1F3782FBD417A053F79AA`
 - Analyzer script SHA-256: `D3C6767AC2E9AFAB5F7AC79B2F4E0A2C8CA07DB4F20D7A0489A1A22F18964D44` (`code/c3_probe8c_projection.py`)
