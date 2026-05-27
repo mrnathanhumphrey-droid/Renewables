@@ -1,7 +1,26 @@
 # Next Session — Pickup Pointer
 
-**Locked:** 2026-05-22 (commit `273be36` on `main`)
-**Last session ended:** Paper 2 full 5-document amended-protocol arc published. Combined headline: "partial replication within-substrate; barely robust to typical academic noise; NOT cross-transferable to real-cell NMC811 via dominant operator." Narrow operational regime documented.
+**Latest activity:** 2026-05-27 — Probe 7 v1 closed NULL (see §"Probe 7 v1" below).
+**Prior anchor:** 2026-05-22 (commit `273be36` on `main`) — Paper 2 amended-protocol arc published.
+
+---
+
+## Probe 7 v1 (2026-05-27 — EIS-triad noise-robustness test)
+
+| Document | Verdict | Lock commit |
+|---|---|---|
+| literature/37 (pre-reg) | — | `771de3a` |
+| literature/38 (v1 result) | **PROBE 7 NULL** at Level 2: 0/3 EIS-triad PASS vs 0/3 HPPC baseline (P7_F4 reproduces literature/26). Operator triad does NOT carry noise rejection under B7 LAM-proxy. | _to be set on result commit_ |
+
+**Path forward (per literature/37 §10):** Probe 7 v2 is the gating follow-up.
+v2 combines three planned variants in one pre-reg:
+- **B5** — true cycled-state EIS via time-domain AC injection at the cycling-solver terminal (replaces the B7 LAM-proxy that left R_ohmic_residual dead).
+- **N2** — EIS-instrument-realistic noise grid (σ_R_ohmic ≈ 1-3%, σ_R_diff ≈ 5-15%) replacing N1's HPPC-typical levels.
+- **Probe 7.3** — secondary fresh-state-feature PERMANOVA (R_ohmic_fresh is a 564× cathode-thickness discriminator on this cohort; would test "do design parameters affect fresh impedance," a different question from "does aging-direction inversion work").
+
+v2 is not yet pre-registered. Cost: ~10-15 min wall additional local compute (B5 adds ~100 sec sim per cell, mostly at low-frequency AC settling); no Modal spend.
+
+**Earlier "Aggron" pre-reg draft (retracted, not committed):** its §1 motivation that "Probe 6 used marginal PERMANOVAs, joint will recover signal" was factually wrong — Probe 6 already runs the joint-vector cosine PERMANOVA on the C1 architecture (`code/c3_noise_injection.py` lines 183-194). The actual unanswered question was operator-triad choice, which Probe 7 v1 addressed and resolved as NULL.
 
 ---
 
