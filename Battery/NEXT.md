@@ -10,7 +10,7 @@
 | Document | Verdict | Lock commit |
 |---|---|---|
 | literature/50 (pre-reg) | — | `a49c830` |
-| literature/51 (result) | **KHAN PARTIAL TRANSFER.** T_C PASSES (F=11.02, p=0.0008; F4 holdout 0.683 > floor 0.50); soc_range NULL (bimodal not three-clustered); charge_rate NULL. Amendment is real beyond synthetic, but operational domain narrowed to design parameters with direct fresh-state EIS signatures. | _to be set_ |
+| literature/51 (result) | **KHAN PARTIAL TRANSFER.** T_C PASSES (F=11.02, p=0.0008; F4 holdout 0.683 > floor 0.50); soc_range NULL (bimodal not three-clustered); charge_rate NULL. Amendment is real beyond synthetic, but operational domain narrowed to design parameters with direct fresh-state EIS signatures. | `71e50a1` |
 
 **Implication:** the amended C3 architecture transfers to real-cell Khan for the design parameter most directly tied to EIS physics (temperature → Arrhenius ionic conductivity + diffusion shifts). It does NOT transfer to design parameters mediated through aging-mechanism mix (SOC window, charge rate).
 

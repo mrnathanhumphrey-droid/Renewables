@@ -141,6 +141,6 @@ Battery substrate ready to be added to RMD-SRC parent doc as "Done — partial c
 ---
 
 **Lock metadata:**
-- Result commit: `<TBD — recorded in follow-up commit>`
+- Result commit: `71e50a1`
 - Result parquet SHA-256: `252AC0811CF8F1CDF5B0AB7BBDEFC5A3B5B07810402070438BAAD7A46D107F7B`
 - Analyzer script SHA-256: `21DFABA3ACF036C1EE2C605BFEDCB92C2EC0FC4051CF0C6787B609120E6CB453`
