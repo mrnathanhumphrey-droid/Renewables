@@ -8,7 +8,19 @@
 
 ---
 
-## 0. Why this amendment exists
+## 0. Framework parentage — RMD-SRC
+
+This amendment is a refinement of the Battery substrate's instantiation of **RMD-SRC** (Recursive Moment-flow Decomposition with Statistical-Rule Classification), the substrate-agnostic algorithm specified at `D:/Resolve Research/RMD SRC Algorithm Specification.docx` (Nathan Humphrey, working draft May 2026). The C3 framework is the Battery substrate's mapping to RMD-SRC; the amendment touches two RMD-SRC steps specifically:
+
+- **RMD-SRC Step 2 (trajectory classification)** — the representation of each cell's moment-flow signature. The original C3 architecture represented each cell as a *residual unit vector* in 3D operator space (aged − fresh, projected to unit sphere). The amended architecture represents each cell as a *PCA-2 unit vector* of the centered z-score of the 6D (fresh + aged) operator stack. This is a Step-2 representation change.
+
+- **RMD-SRC Step 3 (response-function validation)** — the test of whether the moment-flow representation carries design-cell information. The PERMANOVA pseudo-F + permutation p-value is the response-function check for the Battery substrate; that test mechanism is unchanged. The amendment changes WHAT goes into PERMANOVA, not WHAT PERMANOVA does.
+
+The amendment's pre-registration falsifiers (P-amend_F1–F4 implicitly through Probes 7–8) inherit from RMD-SRC §"Pre-registered falsifiers" (RMD_F1–F4: initial cleanness, decomposition convergence, validation agreement, predictive transfer). This inheritance is structural; explicit mapping is documented in each probe's pre-reg.
+
+When the Khan cross-substrate validation (forward condition §5.1) closes, the RMD-SRC §"Substrate applications" table at the parent doc should be updated to add Battery as either "Done" (if Khan PASSES) or "framework-resistant" (if Khan FAILS). That update is to the parent doc, not this lock.
+
+## 0.1 Why this amendment exists
 
 The original C3 framework — residual unit-vector cosine PERMANOVA on a 3-operator EIS or HPPC triad — was demonstrated to collapse at typical academic instrumentation noise (Probe 6, lit/26: 0/3 PASS at Level 2). The substrate-saving framework search ran in two parallel directions:
 
