@@ -124,7 +124,7 @@ Pre-registered floor: held-out accuracy > 0.5 (above chance + 0.17 for 3-level p
 ---
 
 **Lock metadata:**
-- Lock commit: `<TBD — recorded in follow-up commit>`
+- Lock commit: `a49c830`
 - Khan cell_conditions.csv SHA-256: `749CD4CFC1C042D43B5944A3926993F98F23EC953B5B725D8AC756504C3D1F7A` (`data/khan_2025/cell_conditions.csv`)
 - Analyzer script SHA-256: `<TBD — analyzer built post-sign-off, hash recorded with result lock>`
 - Result parquet SHA-256: `<TBD — recorded with result lock>`
