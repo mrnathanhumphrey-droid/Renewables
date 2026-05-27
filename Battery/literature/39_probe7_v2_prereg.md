@@ -168,7 +168,7 @@ Per variant, headline is at Level 2.
 ---
 
 **Lock metadata:**
-- Lock commit: `<TBD — recorded in follow-up commit>`
+- Lock commit: `1097b5b`
 - Generator parquet SHA-256: `7A03BCC9213F5939D4CE581C3AA77289356C122D1EB1F3782FBD417A053F79AA`
 - Generator script SHA-256: `59D40B4F31A8F2632F64F32436691E6E9552147514F5F254AAAF5E99E5371562` (`code/probe7v2_pybamm_b5_generator.py`)
 - Analyzer script SHA-256: `18A112FF8A430349291C20EEEFB92C943542925780445E8804A3A8382DE95305` (`code/c3_probe7_v2_permanova.py`)

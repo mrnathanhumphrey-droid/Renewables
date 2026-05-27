@@ -1,7 +1,7 @@
 # C3 Probe 7 v2 — Result (B5' Cycling-Read EIS + N2 + Fresh-State)
 
 **Date:** 2026-05-27
-**Pre-reg:** `literature/39_probe7_v2_prereg.md` (lock commit `<TBD>`)
+**Pre-reg:** `literature/39_probe7_v2_prereg.md` (lock commit `1097b5b`)
 **Generator parquet:** `data/processed/pybamm_l9_trajectories_eis_v2.parquet`
 **Analyzer:** `code/c3_probe7_v2_permanova.py`
 **Result parquet:** `data/processed/probe7_v2_permanova_results.parquet`
@@ -164,6 +164,6 @@ No further Probe 7 versions planned. C3 framework status updated: aging-residual
 ---
 
 **Lock metadata:**
-- v2 result commit: `<TBD — recorded in follow-up commit>`
+- v2 result commit: `b17f11a`
 - Result parquet SHA-256: `3117BF3E2CEDE1359C09D12A8FFE61F549FAF209755C2A3C627EBB525217CF1E`
 - Generator parquet SHA-256: `7A03BCC9213F5939D4CE581C3AA77289356C122D1EB1F3782FBD417A053F79AA`

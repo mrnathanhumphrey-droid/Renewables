@@ -11,8 +11,8 @@
 |---|---|---|
 | literature/37 (v1 pre-reg) | — | `771de3a` |
 | literature/38 (v1 result) | **PROBE 7 NULL** at Level 2: 0/3 EIS-triad PASS vs 0/3 HPPC baseline (P7_F4 reproduces literature/26). Operator triad does NOT carry noise rejection under B7 LAM-proxy. | `a5a6ba1` |
-| literature/39 (v2 pre-reg) | — | _to be set_ |
-| literature/40 (v2 result) | **PROBE 7 v2 PRIMARY NULL**: B5' cycling-read aged-EIS doesn't rescue Level-2 noise rejection either (0/3 at N1, 1/3 WEAK at N2). Fresh-state×N1 secondary 2/3 PASS LEVEL ROBUST (different test, different question). **The C3 noise sensitivity is architectural, not operator-extraction-driven.** | _to be set_ |
+| literature/39 (v2 pre-reg) | — | `1097b5b` |
+| literature/40 (v2 result) | **PROBE 7 v2 PRIMARY NULL**: B5' cycling-read aged-EIS doesn't rescue Level-2 noise rejection either (0/3 at N1, 1/3 WEAK at N2). Fresh-state×N1 secondary 2/3 PASS LEVEL ROBUST (different test, different question). **The C3 noise sensitivity is architectural, not operator-extraction-driven.** | `b17f11a` |
 
 ### v1 to v2 trajectory
 
