@@ -5,6 +5,22 @@
 
 ---
 
+## Probe 8c (2026-05-27 — projection decomposition)
+
+| Document | Verdict | Lock commit |
+|---|---|---|
+| literature/45 (8c pre-reg) | — | `139ac25` |
+| literature/46 (8c result) | **PROJECTION REDUCTION SAFE — and IMPROVES.** PCA-2 unit cosine at L2: **th F=21.24 (+49% vs full 6D), pr F=20.87 (+54%).** Strongest in entire decomposition arc. PCA-3 also improves (+37%/+27%). PC1=thickness axis, PC2=particle-radius axis (interpretable). Transference still NULL. | _to be set_ |
+
+**Updated C3 amendment recommendation (combined 8a + 8c):**
+- Feature space: variant (iv) fresh+aged 6D stacked
+- Projection: PCA-2 (drop noise dimensions)
+- Distance: cosine (per 8b, distance metric is neutral)
+- Test: PERMANOVA + 10K perms, p<0.0167 + F>3.0 per parameter
+- L2 performance: th F=21.24, pr F=20.87, transference NULL — strongest observed
+
+**Architectural decomposition arc closed.** Two load-bearing components identified (feature-space 8a, projection 8c). Distance metric (8b) and operator extraction (Probe 7) are NOT additional levers. Transference is irrecoverable in the current operator triad regardless of architecture — needs a different physical operator (sub-10 mHz EIS or GITT). Probe 8d (test statistic) remains as optional refinement; L2 PASS already secured.
+
 ## Probe 8b (2026-05-27 — distance-metric decomposition)
 
 | Document | Verdict | Lock commit |
