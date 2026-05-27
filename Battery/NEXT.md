@@ -5,6 +5,22 @@
 
 ---
 
+## Probe 8a (2026-05-27 — feature-space decomposition)
+
+| Document | Verdict | Lock commit |
+|---|---|---|
+| literature/41 (8a pre-reg) | — | `8cfbecc` |
+| literature/42 (8a result) | **FEATURE-SPACE IS THE DIVIDING LINE.** Variant (i) residuals-only [current C3] 0/3 at L2; variants (ii) aged-absolute, (iii) fresh-absolute, (iv) fresh+aged stacked, (v) fresh+residual stacked all **2/3 PASS LEVEL ROBUST at L2** (thickness + particle_radius). Transference structurally invisible across all variants. | _to be set_ |
+
+**Implication:** The C3 framework's Level-2 noise sensitivity is architecturally caused by the residual-feature choice. Math: multiplicative percentage noise on absolute values gives signal/noise ~1.1 for thickness; residuals see ~50× worse signal/noise because aging shift (μΩ) is small relative to absolute baseline (mΩ).
+
+**C3 amendment proposal (literature/42 §B, NOT a locked recommendation):**
+- Switch feature space from residuals to absolute (variant (iv) fresh+aged stacked is the strongest candidate, th F=14.3 / pr F=13.6 at L2)
+- Trade-off: changes the scientific claim from "aging-direction inversion" (residual-specific) to "aged-state design discrimination" or "fresh/aged impedance design fingerprinting" — operationally simpler, theoretically less specific
+- Transference needs a different operator entirely (sub-10 mHz EIS, GITT, or different physical observable)
+
+**Probe 8b/c/d:** lower-priority now that 8a established Level-2 survival. 8b (Mahalanobis distance) + 8c (projection) likely improve F-values on variant (iv) further but don't change the headline. 8d (test statistic) only if 8b+8c reveal unexpected results.
+
 ## Probe 7 arc (2026-05-27 — EIS-triad noise-robustness)
 
 | Document | Verdict | Lock commit |
