@@ -140,7 +140,7 @@ _(Will be filled in if any deviations during execution.)_
 ---
 
 **Lock metadata:**
-- Lock commit: `<TBD — recorded in follow-up commit>`
+- Lock commit: `771de3a`
 - Generator parquet SHA-256: `BBBA635FCE7797919FA7140DF3D4CB2835FBA14F54F9261949C1B42C85A0E777`
 - Generator script SHA-256: `E95E60B6C586F1E74204FD2AB37D41065EA17FE814CD3556F08409DCA8E6653F` (`code/probe7_pybamm_eis_generator.py`)
 - Analyzer script SHA-256: `F6E87158EEFEE441D96209446A49BF4A950263CA720565B4B675C5078F3E0C81` (`code/c3_probe7_eis_permanova.py`)

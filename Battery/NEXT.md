@@ -10,7 +10,7 @@
 | Document | Verdict | Lock commit |
 |---|---|---|
 | literature/37 (pre-reg) | — | `771de3a` |
-| literature/38 (v1 result) | **PROBE 7 NULL** at Level 2: 0/3 EIS-triad PASS vs 0/3 HPPC baseline (P7_F4 reproduces literature/26). Operator triad does NOT carry noise rejection under B7 LAM-proxy. | _to be set on result commit_ |
+| literature/38 (v1 result) | **PROBE 7 NULL** at Level 2: 0/3 EIS-triad PASS vs 0/3 HPPC baseline (P7_F4 reproduces literature/26). Operator triad does NOT carry noise rejection under B7 LAM-proxy. | `a5a6ba1` |
 
 **Path forward (per literature/37 §10):** Probe 7 v2 is the gating follow-up.
 v2 combines three planned variants in one pre-reg:

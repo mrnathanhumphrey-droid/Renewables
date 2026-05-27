@@ -130,6 +130,6 @@ Probe 7 v1 closed as **NULL**. v2 (combined B5 + N2 + Probe 7.3) flagged as next
 ---
 
 **Lock metadata:**
-- v1 result commit: `<TBD — recorded in follow-up commit>`
+- v1 result commit: `a5a6ba1`
 - Result parquet SHA-256: `8C0356A5E88ED76E30854886E1758A1719DF87D332462BFEC80CC9E20B35E640`
 - HPPC baseline parquet SHA-256: `A69CF9D668E88E26D5BE51EC35D198926926A3DF1D0865C67DB5ED93A9DD87AE`
