@@ -170,5 +170,5 @@ Probe 8a closed: **FEATURE-SPACE IS THE DIVIDING LINE.** The C3 framework's Leve
 ---
 
 **Lock metadata:**
-- 8a result commit: `<TBD — recorded in follow-up commit>`
+- 8a result commit: `9dd3468`
 - Result parquet SHA-256: `184C2892EB6F0CA1A0C47B62DB1E24BCCE6F6BA42453A9A044BAF5C8EAD6DFBE`

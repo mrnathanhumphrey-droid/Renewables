@@ -134,6 +134,6 @@ These will be pre-registered separately based on 8a's outcome.
 ---
 
 **Lock metadata:**
-- Lock commit: `<TBD — recorded in follow-up commit>`
+- Lock commit: `8cfbecc`
 - v2 parquet SHA-256 (reused): `7A03BCC9213F5939D4CE581C3AA77289356C122D1EB1F3782FBD417A053F79AA`
 - Analyzer script SHA-256: `04B24CB1501F0C3C0F3689C7C07E1E6E3EE958A4C7C65544ECBDF7365632AD54` (`code/c3_probe8a_feature_space.py`)

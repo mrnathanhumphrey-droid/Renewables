@@ -10,7 +10,7 @@
 | Document | Verdict | Lock commit |
 |---|---|---|
 | literature/41 (8a pre-reg) | — | `8cfbecc` |
-| literature/42 (8a result) | **FEATURE-SPACE IS THE DIVIDING LINE.** Variant (i) residuals-only [current C3] 0/3 at L2; variants (ii) aged-absolute, (iii) fresh-absolute, (iv) fresh+aged stacked, (v) fresh+residual stacked all **2/3 PASS LEVEL ROBUST at L2** (thickness + particle_radius). Transference structurally invisible across all variants. | _to be set_ |
+| literature/42 (8a result) | **FEATURE-SPACE IS THE DIVIDING LINE.** Variant (i) residuals-only [current C3] 0/3 at L2; variants (ii) aged-absolute, (iii) fresh-absolute, (iv) fresh+aged stacked, (v) fresh+residual stacked all **2/3 PASS LEVEL ROBUST at L2** (thickness + particle_radius). Transference structurally invisible across all variants. | `9dd3468` |
 
 **Implication:** The C3 framework's Level-2 noise sensitivity is architecturally caused by the residual-feature choice. Math: multiplicative percentage noise on absolute values gives signal/noise ~1.1 for thickness; residuals see ~50× worse signal/noise because aging shift (μΩ) is small relative to absolute baseline (mΩ).
 
