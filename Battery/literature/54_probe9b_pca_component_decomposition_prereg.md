@@ -1,6 +1,6 @@
 # C3 Probe 9b — PCA Component Decomposition Pre-Registration
 
-**Status:** DRAFT — locks on Nathan's sign-off, before any Probe 9b analysis fires.
+**Status:** LOCKED 2026-05-27 at commit `d9dcdf6`. No Probe 9b analysis had fired at lock time.
 **Date drafted:** 2026-05-27
 **Authored:** Claude
 **Repo target on lock:** `Battery/literature/54_probe9b_pca_component_decomposition_prereg.md`
@@ -126,7 +126,7 @@ All three run for L2 PRIMARY as the locked headline level; (B) reported at all f
 ---
 
 **Lock metadata:**
-- Lock commit: `<TBD — recorded in follow-up commit>`
+- Lock commit: `d9dcdf6`
 - Analyzer script SHA-256: `<TBD — recorded after build>`
 - Result parquet SHA-256: `<TBD — recorded with result>`
 - Input parquet (8D, already locked in lit/53): `09c76cb21cf7a8a4065e1d0ce7d9e1a65a6c5617c561c7f19449d328616de850` (`pybamm_l9_trajectories_eis_v3.parquet`). 6D v2 SHA recorded at build time.
