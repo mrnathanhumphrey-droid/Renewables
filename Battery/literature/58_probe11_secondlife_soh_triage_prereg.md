@@ -1,6 +1,6 @@
 # C3 Probe 11 — Second-Life SOH Triage (real-cell SECL) Pre-Registration
 
-**Status:** DRAFT — locks on Nathan's sign-off, before any Probe 11 extraction/PERMANOVA fires.
+**Status:** LOCKED 2026-05-28 at commit `ed2df82`. No Probe 11 extraction/PERMANOVA had fired at lock time.
 **Date drafted:** 2026-05-28
 **Authored:** Claude
 **Repo target on lock:** `Battery/literature/58_probe11_secondlife_soh_triage_prereg.md`
@@ -111,8 +111,9 @@ This is explicitly a **proof-of-concept on a thin real cohort**, not a deploymen
 ---
 
 **Lock metadata:**
-- Lock commit: `<TBD — recorded in follow-up commit>`
-- Extractor SHA-256: `<TBD — recorded after build>`
-- Observations parquet SHA-256: `<TBD — recorded after build>`
-- Analyzer SHA-256: `<TBD — recorded after build>`
-- Result parquet SHA-256: `<TBD — recorded with result>`
+- Lock commit: `ed2df82`
+- Extractor SHA-256: `cdf983dbc1ecfba2cc3d5065b14cbbc1bbecc10b0f762cf4cc1aa85210721a47`
+- Observations parquet SHA-256: `9dd867c532b86dd3058a719cb8bf2750f28decccadb935bb09f73d98323ca703`
+- Analyzer SHA-256: `0ae8ce4e466e0922d739934e8e90da75571d2832f728200c82f6b8599b67c74d`
+- Result parquet SHA-256: `047d385ae097ca0c326afe9a16c6925cb7916265074f7bc40bdcd044eb5f1485`
+- Result writeup: `literature/59_probe11_secondlife_soh_triage_result.md` — disposition SOH-READABLE (within-cell only)
