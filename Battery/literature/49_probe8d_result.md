@@ -117,5 +117,5 @@ Probe 8d closed: **TEST STATISTIC MIXED at L2 — PERMANOVA and LR equivalent at
 ---
 
 **Lock metadata:**
-- 8d result commit: `<TBD — recorded in follow-up commit>`
+- 8d result commit: `a64bbe0`
 - Result parquet SHA-256: `D92346822EBF6EA620B40C9CF34F1E4B504B8D89C10833034D524BEE029B4BEC`

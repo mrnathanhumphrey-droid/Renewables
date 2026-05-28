@@ -99,6 +99,6 @@ Cost: 0 new data; modest CPU (1000-perm CV bootstrap). ~10-15 min wall expected.
 ---
 
 **Lock metadata:**
-- Lock commit: `<TBD — recorded in follow-up commit>`
+- Lock commit: `a39e077`
 - v2 parquet SHA-256 (reused): `7A03BCC9213F5939D4CE581C3AA77289356C122D1EB1F3782FBD417A053F79AA`
 - Analyzer script SHA-256: `3B0A37D778DF393282EFD1E2A7E1363CF4DB75683190581D670DEEFD5271EF9C` (`code/c3_probe8d_test_statistic.py`)
