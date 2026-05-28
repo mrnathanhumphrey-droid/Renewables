@@ -1,6 +1,6 @@
 # C3 Probe 10 — GITT Finite-Amplitude Transference Pre-Registration
 
-**Status:** DRAFT — locks on Nathan's sign-off, before any Probe 10 PERMANOVA fires.
+**Status:** LOCKED 2026-05-28 at commit `6f2d4f8`. No Probe 10 PERMANOVA had fired at lock time.
 **Date drafted:** 2026-05-28
 **Authored:** Claude
 **Repo target on lock:** `Battery/literature/56_probe10_gitt_transference_prereg.md`
@@ -111,8 +111,9 @@ Multiplicative for parallelism with Probe 9; the mV-equivalent column shows it i
 ---
 
 **Lock metadata:**
-- Lock commit: `<TBD — recorded in follow-up commit>`
+- Lock commit: `6f2d4f8`
 - Generator SHA-256: `9a37601a1e7967f0886aaf9aa23bd29cfbcc08e3ef8eb2f32b4a1a829ea3e3e7` (`code/probe10_pybamm_gitt_generator.py`)
 - GITT parquet SHA-256: `0851ff9fc39689131e5673e61cc3ef1f1b628c74ae1db7271bebf6d81ec9619e` (`pybamm_l9_trajectories_gitt_v1.parquet`)
-- Analyzer SHA-256: `<TBD — recorded after build>`
-- Result parquet SHA-256: `<TBD — recorded with result>`
+- Analyzer SHA-256: `b5583c24e216e785983186ea16453b5be7205d5788af6c755742811a47b8be37`
+- Result parquet SHA-256: `808fe135246376bba39bdde3b6f6ebd2d208bb3c41e1a487a18a7b53c6c4341b`
+- Result writeup: `literature/57_probe10_gitt_transference_result.md` — disposition TRANSFERENCE STILL NULL (positive control PASSES)
