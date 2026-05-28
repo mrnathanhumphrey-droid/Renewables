@@ -1,0 +1,157 @@
+{
+  "n_systems_ok": 668,
+  "hypotheses": {
+    "H1": {
+      "verdict": "REFUTED",
+      "eta2": {
+        "eta2_partial": 0.01857895356431647,
+        "p": 0.0019955113538031944,
+        "n": 668,
+        "levels": 3
+      },
+      "T_zone_median_plr": {
+        "T3": -0.58,
+        "T4": -1.052,
+        "T5": -0.84
+      },
+      "monotone_rho": NaN,
+      "monotone_p": NaN
+    },
+    "H2": {
+      "verdict": "REFUTED",
+      "n_hot_cells": 3,
+      "frac_gradient_tracking": 0.0,
+      "frac_fragmenting": 0.0,
+      "hot_cell_regimes": {
+        "T5:H2": "Stationary",
+        "T5:H3": "Stationary",
+        "T5:H4": "Diffusing"
+      }
+    },
+    "H3": {
+      "verdict": "INDETERMINATE",
+      "reason": "mounting metadata too sparse",
+      "n_roof": 0,
+      "n_ground": 0
+    },
+    "H4": {
+      "verdict": "INDETERMINATE",
+      "reason": "tracking metadata too sparse",
+      "n_tracking": 0
+    },
+    "H5": {
+      "verdict": "CONFIRMED",
+      "eta2": {
+        "eta2_partial": 0.0026387594583683043,
+        "p": 0.4164849632927941,
+        "n": 668,
+        "levels": 3
+      },
+      "n_H_zones_below_50": 1,
+      "H_zone_counts": {
+        "H3": 593,
+        "H4": 57,
+        "H2": 18
+      }
+    }
+  },
+  "falsifiers": {
+    "F_Fleet_1_no_signal": {
+      "fired": false,
+      "fleet_median_plr": -0.7943042409986596,
+      "frac_CI_cross_zero": 0.4221556886227545
+    },
+    "F_Fleet_2_climate_null_vs_anchor": {
+      "fired": true
+    },
+    "F_Fleet_3_inversion": {
+      "fired": false,
+      "monotone_rho": NaN,
+      "monotone_p": NaN
+    },
+    "RMD_F1_initial_cleanness": {
+      "fired": true,
+      "frac_clean": 0.8
+    },
+    "RMD_F2_decomp_convergence": {
+      "note": "evaluated only if decomposition run"
+    }
+  },
+  "cells": {
+    "T3:H3": {
+      "n": 320,
+      "plr_median": -0.5797976058166704,
+      "regime": "Stationary",
+      "moment_flow": {
+        "n_sys": 320,
+        "n_months": 72,
+        "slope_mu_per_yr": 0.0012717256216408519,
+        "r2_mu": 0.0016660085482259653,
+        "p_mu": 0.7335386104419985,
+        "slope_var_per_yr": 0.0014184700164890393,
+        "p_var": 0.0014133222347132155,
+        "mu_level": 1.0094774800905273
+      }
+    },
+    "T4:H3": {
+      "n": 234,
+      "plr_median": -1.0524095793059507,
+      "regime": "Stationary",
+      "moment_flow": {
+        "n_sys": 234,
+        "n_months": 72,
+        "slope_mu_per_yr": 0.00020370584068288782,
+        "r2_mu": 0.00017664760245990596,
+        "p_mu": 0.9117686049557888,
+        "slope_var_per_yr": 0.008004623168394497,
+        "p_var": 1.7053417272639974e-12,
+        "mu_level": 0.9970583178553147
+      }
+    },
+    "T5:H2": {
+      "n": 18,
+      "plr_median": -0.8052456297455102,
+      "regime": "Stationary",
+      "moment_flow": {
+        "n_sys": 18,
+        "n_months": 69,
+        "slope_mu_per_yr": -0.00313822907855317,
+        "r2_mu": 0.012065179893657582,
+        "p_mu": 0.36893665821998267,
+        "slope_var_per_yr": 0.00192529632962542,
+        "p_var": 0.001255767455345285,
+        "mu_level": 0.9789392102550036
+      }
+    },
+    "T5:H3": {
+      "n": 39,
+      "plr_median": -0.6235387215472121,
+      "regime": "Stationary",
+      "moment_flow": {
+        "n_sys": 39,
+        "n_months": 72,
+        "slope_mu_per_yr": -0.004478236821290155,
+        "r2_mu": 0.022725217919624223,
+        "p_mu": 0.20623105758946172,
+        "slope_var_per_yr": 0.002112506775745227,
+        "p_var": 0.36723350204614036,
+        "mu_level": 1.0551753221355995
+      }
+    },
+    "T5:H4": {
+      "n": 57,
+      "plr_median": -0.9803200634396214,
+      "regime": "Diffusing",
+      "moment_flow": {
+        "n_sys": 57,
+        "n_months": 72,
+        "slope_mu_per_yr": -0.008242749463488776,
+        "r2_mu": 0.12351235699390399,
+        "p_mu": 0.0024691261852165768,
+        "slope_var_per_yr": 0.005691828158581706,
+        "p_var": 6.920767756815668e-22,
+        "mu_level": 0.9934976098738204
+      }
+    }
+  }
+}

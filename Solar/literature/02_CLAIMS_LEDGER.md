@@ -133,6 +133,18 @@ These are new ledger entries surfaced by primary-source retrieval; they go beyon
 | CLM-067 | PVDAQ license is CC-BY 4.0 | **VERIFIED** | OEDI submission 4568 page | Permits substrate-internal redistribution + paper-time citation |
 | CLM-068 | rdtools package (NREL, MIT license) cloned to `Solar/code/rdtools/`; modules include aggregation, analysis_chains, availability, bootstrap, clearsky_temperature, degradation, filtering, normalization, plotting, soiling | **VERIFIED** | Direct clone + ls | Operational role in 19_PREREG §14 Step 5 moment-flow computation |
 
+## Probe 2 result CLMs — Fleet PLR × PVCZ (own empirical findings, 2026-05-28)
+
+These are substrate-generated empirical results (memo `24_RESULT_v1.0_FleetPLR_PVCZ_RMDSRC.md`), VERIFIED in the sense of "computed by locked-pre-reg pipeline on primary data," subject to the threats in result §6.
+
+| ID | Claim | Status | Cited source | Notes |
+|---|---|---|---|---|
+| CLM-069 | PVDAQ fleet median PLR = −0.79 %/yr (n=668, 2018-2023 window, PVWatts+NSRDB+rdtools YoY) | **VERIFIED-OWN** | Probe 2 result §2 | Replicates Jordan 2022 system-level −0.75 %/yr |
+| CLM-070 | PVCZ temperature zone explains only η²=0.019 of PLR variance (p=0.002, non-monotone: T3 −0.58 / T4 −1.05 / T5 −0.84 %/yr) | **VERIFIED-OWN** | Probe 2 result §1-2, H1 REFUTED | Climate signal does NOT survive in heterogeneous fleet |
+| CLM-071 | PVCZ humidity zone explains η²=0.003 of PLR variance (p=0.42, null) | **VERIFIED-OWN** | Probe 2 result H5 CONFIRMED | Replicates Jordan 2022 humidity indeterminacy |
+| CLM-072 | Climate-PLR ordering (Jordan 2022) requires technology-controlled cohorts; heterogeneous public fleet (mixed cell-tech, residential rooftop) buries the ~0.4 %/yr climate effect under ~1.5-2 %/yr within-cell variance | **VERIFIED-OWN** | Probe 2 result §4, F_Fleet_2 fired | Boundary condition on Jordan 2022, NOT a refutation; lab-design lesson §8 |
+| CLM-073 | PVDAQ mounting metadata 98% UNKNOWN; tracking 1251:2 fleet-wide → roof/ground (H3) + tracker-null (H4) untestable in PVDAQ index | **VERIFIED-OWN** | Probe 2 result §1, H3/H4 INDETERMINATE | Metadata-completeness limit, not a physics finding |
+
 ## Köntges T13-09:2017 + Ilse 2019 + Jordan-Kurtz 2013 anchor-verified entries
 
 | ID | Claim | Status | Cited source | Notes |
@@ -154,6 +166,7 @@ These are new ledger entries surfaced by primary-source retrieval; they go beyon
 | v3 | 2026-05-27 | Karin 2019 PVCZ literal threshold extraction via `pvcz` v0.3.0 package binary | operator (direct npz load) | Karin zone thresholds extracted. **Correction surfaced:** canonical PVCZ is T×H = 50 zones (NOT 250 as substrate memory + 19_PREREG had stated). 7 new VERIFIED CLMs (051-057). See memo `20_KARIN2019_THRESHOLDS_extracted.md`. 19_PREREG DEVIATION-log entry filed. |
 | v4 | 2026-05-27 | T13-30:2025 SLIDES retrieval + read | operator + WebFetch | 5-slide presentation read; 4th independent confirmation of ERR-4 closure (Köntges/Lin/Jahn). Triangulation memo. No new CLMs (all SLIDES claims already in ledger from EX-SUMM/REPORT FULL/PVFS). See memo 21. |
 | v5 | 2026-05-27 | OEDI PVDAQ alternate-path pull + rdtools clone | operator (curl S3 + git clone) | **DuraMAT blocker resolved via OEDI alternate.** 1862-system PVDAQ index CSV in hand with **pre-computed Karin PVCZ assignments**. **New gap surfaced:** PVDAQ index lacks cell-architecture field; TOPCon cohort identification needs S3 per-system JSON or manufacturer outreach. 11 new VERIFIED CLMs (058-068). rdtools cloned MIT-licensed. See memo 22. |
+| Probe2 | 2026-05-28 | Probe 2 EXECUTION: 668-system PVDAQ fleet PLR × PVCZ partition (PVWatts+NSRDB v4+rdtools YoY) | operator pipeline (locked pre-reg 165342b) | **Fleet median PLR −0.79 %/yr replicates Jordan 2022.** But climate-T partition does NOT survive (η²=0.019, H1 REFUTED, F_Fleet_2 fired); humidity null (H5 CONFIRMED); mounting/tracking INDETERMINATE (metadata gap). Mechanism: heterogeneous fleet buries climate signal. 5 own-result CLMs (069-073). See result memo 24. |
 
 ---
 

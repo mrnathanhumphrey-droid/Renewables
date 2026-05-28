@@ -272,8 +272,10 @@ Pre-reg discipline: results table reports H1-H5 + all falsifier verdicts BEFORE 
 
 | Date | Deviation | Rationale |
 |---|---|---|
+| 2026-05-27 | **Observation window fixed to 2018-2023 (NSRDB v4 GOES CONUS coverage).** §4 x_3 specified "NSRDB-modeled" irradiance for normalization. At acquisition: NSRDB **v4 GOES CONUS** covers 2018-2023 only (GOES-16/17 era); legacy PSM **v3** (1998-2020) is a different irradiance product. Splicing v3+v4 within a single system's PI series would inject a product-discontinuity step that corrupts YoY degradation. Chose v4-only → a **uniform 2018-2023 window across the whole fleet**. All 1288 cohort systems retain ≥2 yr in-window (1253 ≥3 yr); all 1151 systems in the 5 viable PVCZ cells fully retained. | (a) Single consistent irradiance product avoids version-seam bias. (b) Uniform calendar window controls for climate-year confounds across the fleet. (c) **Noted consequence:** a fixed calendar window observes different-vintage systems at different life-stages (a 2012-vintage system contributes its years 6-11; a 2019-vintage system its years 0-4 incl. LID break-in). The A_VINT ℙ₀ axis (§3) captures this; §7 4b year-1-vs-steady-state split is the decomposition lever if life-stage confounds a leaf. PLR estimated here is therefore a **mid-life-weighted steady-state PLR**, not a lifetime-from-install PLR. |
+| 2026-05-27 | **Normalization model fixed (per §15 #6 acquisition-time choice):** measured PVDAQ daily AC energy ÷ pvlib PVWatts DC expected energy, NSRDB irradiance → Hay-Davies POA transposition → SAPM open-rack cell temp → PVWatts DC (gamma_pdc −0.0047/°C, Pdc0 = dc_capacity_kW). | Residential PVDAQ tier has daily AC energy only (no on-site irradiance/temp — memo 22 §3 / acquisition finding). PVWatts expected-energy normalization with satellite irradiance is the standard fleet-PLR approach when on-site sensors are absent. Constant inverter efficiency + level offset cancel under YoY differencing; clipping (DC/AC>1) acknowledged residual (§17). |
 
-(Empty at v1.0 lock.)
+(v1.0 lock SHA `165342b` unchanged; these are acquisition-time operationalizations logged per discipline, not scope amendments.)
 
 ---
 

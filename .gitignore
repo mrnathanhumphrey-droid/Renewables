@@ -11,6 +11,13 @@ Battery/data/khan_2025/*
 Solar/data/*
 !Solar/data/.gitkeep
 !Solar/data/raw/datasets/OSTI_1842958_metadata.csv
+# Probe 2 small processed result artifacts (reproducibility); raw caches + monthly_pi stay ignored
+!Solar/data/processed/
+Solar/data/processed/*
+!Solar/data/processed/probe2_cohort_p0.csv
+!Solar/data/processed/probe2_p0_cell_counts.csv
+!Solar/data/processed/probe2_plr_results_clean.csv
+!Solar/data/processed/probe2_verdicts.json
 
 # Solar substrate — vendor code clones (upstream MIT/BSD repos pulled for operational use)
 # Reproduction: see Solar/literature/22_PVDAQ_alternate_path_and_rdtools.md
@@ -30,3 +37,9 @@ Thumbs.db
 .vscode/
 .idea/
 *.swp
+
+# Secrets — API keys, never commit
+.env
+*.env
+.nsrdb_key
+Solar/code/.secrets*
