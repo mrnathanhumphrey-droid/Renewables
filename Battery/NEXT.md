@@ -5,6 +5,15 @@
 
 ---
 
+## Probe 8d (2026-05-27 — test-statistic decomposition, ARC CLOSED)
+
+| Document | Verdict | Lock commit |
+|---|---|---|
+| literature/48 (8d pre-reg) | — | `a39e077` |
+| literature/49 (8d result) | **TEST STATISTIC MIXED at L2.** PERMANOVA + LR both 2/3 PASS (equivalent); RF 1 PASS + 1 WEAK (modest degrade at n=101). PERMANOVA choice justified but not unique. Subsidiary: **RF catches transference at L0** (acc=0.672, p=0.001) like 8b Mahalanobis — confirms transference exists, unrecoverable beyond Level 0. | _to be set_ |
+
+**Probe 8 arc fully closed.** Two load-bearing components (feature-space 8a + projection 8c); two neutral components (distance metric 8b + test statistic 8d at L2). Operator extraction (Probe 7) NULL. C3 amendment lock at lit/47 unchanged.
+
 ## Khan cross-substrate validation (2026-05-27 — amendment deployment gate)
 
 | Document | Verdict | Lock commit |
