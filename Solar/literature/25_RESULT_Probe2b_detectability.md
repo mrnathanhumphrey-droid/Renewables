@@ -62,11 +62,26 @@ An η² test at n=17 cannot distinguish η²=0.02 from η²=0.30. Running it as 
 
 ---
 
+## 4b. Variance decomposition — measurement noise vs true heterogeneity (resolves §5 caveat #3)
+
+The σ_within = 2.41 %/yr includes both genuine system-to-system heterogeneity and PLR *estimation* noise from the daily-energy-only normalization. The per-system 68.2% bootstrap CIs (computed by rdtools for every system) directly estimate the measurement component. Quadrature decomposition:
+
+| Component | Value |
+|---|---|
+| σ_within total | 2.41 %/yr |
+| Per-system measurement RMS (from bootstrap CIs) | 1.36 %/yr |
+| **Measurement fraction of within-cell variance** | **32%** |
+| **σ_TRUE heterogeneity** (√(σ_total² − σ_meas²)) | **1.99 %/yr** |
+| True heterogeneity vs Jordan implied (0.99) | **2.01×** (revised from 2.44×) |
+| Power to detect Jordan effect at TRUE σ, n=668 | **0.49** (revised from 0.35) |
+
+**The underpowering conclusion is robust to method noise.** The daily-energy normalization adds real noise (a third of the variance), so the raw 2.44× inflation overstates true heterogeneity — the honest figure is **~2.0×**. But even with perfect measurement (σ = 1.99 %/yr true heterogeneity), power to detect Jordan's climate effect is only **0.49** — still well below 0.8. PVDAQ's *genuine* fleet heterogeneity (2× Jordan's homogeneous cohort), independent of my measurement method, is sufficient to bury the climate signal. A measured-POA pipeline would remove the 32% measurement component but would NOT recover the climate signal — the true heterogeneity is the binding constraint.
+
 ## 5. Threats / caveats
 
 - **Jordan's within-cohort σ (0.99 %/yr) is back-solved**, not directly reported — inferred from his p<0.001 at n≈1528, k≈3. The inflation ratio is order-of-magnitude robust (PVDAQ σ=2.41 is directly measured; even if Jordan's true σ were 1.3, the ratio is still ~1.9×). Directionally certain; the exact 2.44× has modest uncertainty.
 - Power calc assumes balanced one-way ANOVA; PVDAQ cells are unbalanced (T3:H3=320, T5:H2=18). Unbalance reduces effective power further → 35% is if anything optimistic.
-- σ_within includes PLR estimation noise (bootstrap CI width) on top of true system-to-system variance. Part of the 2.41 is measurement noise from daily-energy-only normalization (result 24 §6 #3); a measured-POA fidelity check would partition this. Even so, the bulk is genuine fleet heterogeneity.
+- ~~σ_within includes PLR estimation noise...~~ **RESOLVED in §4b:** measurement noise is 32% of within-cell variance; true heterogeneity is 1.99 %/yr (2.0× Jordan), and power at the true σ is still only 0.49. The underpowering conclusion is robust to the daily-energy method noise.
 
 ---
 
@@ -78,6 +93,7 @@ An η² test at n=17 cannot distinguish η²=0.02 from η²=0.30. Running it as 
 | CLM-075 | At PVDAQ heterogeneity, power to detect Jordan's 0.40 %/yr climate effect at n=668 is 0.35; ~1,938 systems needed for power 0.8 | VERIFIED-OWN |
 | CLM-076 | H1 null is REFUTED-BY-UNDERPOWER (Type-II-prone), not evidence climate is irrelevant; the η²=0.019 PVDAQ saw is non-monotone/confounded, not Jordan's ordered effect | VERIFIED-OWN |
 | CLM-077 | Technology-controlled climate test infeasible in PVDAQ: cell-arch (modules table, 156 systems) has 0 overlap with the 668 PLR cohort; only 17 mono/multi-Si systems are qa-pass+years≥5 | VERIFIED-OWN |
+| CLM-078 | Variance decomposition: 32% of PVDAQ within-cell PLR variance is measurement noise (daily-energy normalization); true heterogeneity σ=1.99 %/yr = 2.0× Jordan; power at true σ still only 0.49 → underpowering robust to method noise | VERIFIED-OWN |
 
 ---
 

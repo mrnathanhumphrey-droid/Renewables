@@ -26,5 +26,13 @@
   "n_required_for_jordan_effect_at_pvdaq_sigma": 1937.707095075484,
   "jordan_implied_within_cohort_sigma": 0.9882466810842684,
   "heterogeneity_inflation_ratio": 2.4371875242776224,
+  "variance_decomposition": {
+    "sigma_within_total": 2.4085424820473453,
+    "measurement_rms": 1.3633973529640897,
+    "measurement_variance_fraction": 0.32043228835152615,
+    "sigma_true_heterogeneity": 1.9855036000363484,
+    "true_inflation_vs_jordan": 2.009117397548885,
+    "power_at_true_sigma": 0.49287413508382105
+  },
   "pvdaq_observed_eta2_Tzone": 0.01857895356431647
 }

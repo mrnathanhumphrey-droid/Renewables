@@ -78,6 +78,21 @@ def main():
     out["jordan_implied_within_cohort_sigma"] = float(jordan_sigma_implied)
     out["heterogeneity_inflation_ratio"] = float(sigma_within / jordan_sigma_implied)
 
+    # ---- 5b. variance decomposition: measurement noise vs true heterogeneity ----
+    df["sigma_meas"] = (df["ci_high"] - df["ci_low"]) / 2.0  # 68.2% CI ≈ 1σ measurement
+    df["cell_med"] = df.groupby("P0_primary_TH")["plr_pct_yr"].transform("median")
+    sig_tot = float((df["plr_pct_yr"] - df["cell_med"]).std())
+    mean_meas_var = float((df["sigma_meas"] ** 2).mean())
+    sig_true = float(np.sqrt(max(sig_tot**2 - mean_meas_var, 0)))
+    pwr_true = analysis.power(effect_size=jordan_sd_of_means / sig_true, nobs=n_total, alpha=0.05, k_groups=k_groups)
+    out["variance_decomposition"] = {
+        "sigma_within_total": sig_tot,
+        "measurement_rms": float(np.sqrt(mean_meas_var)),
+        "measurement_variance_fraction": mean_meas_var / sig_tot**2,
+        "sigma_true_heterogeneity": sig_true,
+        "true_inflation_vs_jordan": sig_true / jordan_sigma_implied,
+        "power_at_true_sigma": float(pwr_true)}
+
     # observed PVDAQ eta2 for reference
     model = smf.ols("plr_pct_yr ~ C(A_PVCZ_T) + C(A_PVCZ_H)", data=df).fit()
     aov = sm.stats.anova_lm(model, typ=2)
@@ -100,6 +115,12 @@ def main():
     print()
     print(f"Jordan implied within-cohort sigma: {jordan_sigma_implied:.3f} %/yr")
     print(f"HETEROGENEITY INFLATION RATIO (PVDAQ/Jordan sigma): {out['heterogeneity_inflation_ratio']:.2f}x")
+    vd = out["variance_decomposition"]
+    print()
+    print("--- variance decomposition (measurement vs true heterogeneity) ---")
+    print(f"  measurement fraction: {vd['measurement_variance_fraction']:.1%}")
+    print(f"  sigma_true heterogeneity: {vd['sigma_true_heterogeneity']:.3f} %/yr ({vd['true_inflation_vs_jordan']:.2f}x Jordan)")
+    print(f"  power at true sigma: {vd['power_at_true_sigma']:.3f} (still < 0.8 -> underpowering robust)")
 
     (PROC / "probe2b_detectability.json").write_text(json.dumps(out, indent=2))
     print(f"\nWrote {PROC/'probe2b_detectability.json'}")
