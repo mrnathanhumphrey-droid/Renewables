@@ -271,8 +271,7 @@ Pre-reg discipline: results table reports H1-H5 + F1-F7 verdicts BEFORE any narr
 
 | Date | Deviation | Rationale |
 |---|---|---|
-
-(Empty at v1.0 lock.)
+| 2026-05-27 | **Karin PVCZ axis-cardinality clarified:** §3 ℙ₀ axes correctly list `A_PVCZ_T` × `A_PVCZ_H` (T-zone × H-zone). §15 threat-of-validity #4 incorrectly listed "T-zone × H-zone × W-zone combinatorial sparsity" — W is an independent stressor in the pvcz package, NOT part of the canonical PVCZ label. Canonical PVCZ = T×H = 50 zones. Correcting §15 #4 to read T-zone × H-zone only. Substrate memory's "250" figure was the same error and is being corrected separately. | Direct extraction from `pvcz` v0.3.0 npz: `total_num_zones=50`, `zone_spec['pvcz']` enumerates 50 T:H labels. See memo `20_KARIN2019_THRESHOLDS_extracted.md` for full thresholds. Pre-reg ℙ₀ cardinality unchanged in substance (§3 was already correct); §15 wording corrected. No re-lock required (clarification of a stated axis, not amendment to scope). |
 
 ---
 
@@ -298,7 +297,7 @@ Pre-reg discipline: results table reports H1-H5 + F1-F7 verdicts BEFORE any narr
 1. **TOPCon market scale-up is recent (~2022 per ITRPV);** field n at 2+ years exposure may be small in 2026-2027 measurement windows.
 2. **Encapsulation BOM disclosure is incomplete** for many commercial TOPCon products. May require destructive sampling or NDA with manufacturer.
 3. **UVID is one of multiple concurrent degradation modes** (PID, LeTID partial, thermal-cycling crack growth). Mode-decomposition error propagates to UVID attribution.
-4. **Karin 2019 PVCZ T-zone × H-zone × W-zone combinatorial sparsity** may collapse some cells below n_c ≥ 50 minimum; cell aggregation rules may need amendment.
+4. **Karin 2019 PVCZ T-zone × H-zone combinatorial sparsity** (50 canonical zones; W is independent stressor not multiplied into PVCZ label, per §13 DEVIATION 2026-05-27) may collapse some cells below n_c ≥ 50 minimum; cell aggregation rules may need amendment.
 5. **DuraMAT fleet dataset access** is currently blocked by NREL SSL/TLS host issue (per session 2026-05-27); alternate data sources (OEDI, RTC partnerships, lab outdoor arrays) may have different ℙ₀ resolution.
 
 ---

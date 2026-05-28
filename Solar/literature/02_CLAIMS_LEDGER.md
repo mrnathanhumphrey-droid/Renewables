@@ -105,6 +105,34 @@ These are new ledger entries surfaced by primary-source retrieval; they go beyon
 | CLM-pvlib-2 | pvlib v0.15.1 (2026-04-21), 1917 commits, NumFOCUS-affiliated, BSD-3-Clause | VERIFIED | GitHub.com/pvlib/pvlib-python | Current state |
 | CLM-pvlib-3 | 2023 JOSS update paper (Anderson, Hansen, Holmgren, Jensen, Mikofski, Driesse) | TENTATIVELY-VERIFIED | JOSS | Cite alongside 2018 for current state |
 
+## Karin 2019 PVCZ literal zone thresholds (extracted 2026-05-27 from pvcz binary)
+
+| ID | Claim | Status | Cited source | Notes |
+|---|---|---|---|---|
+| CLM-051 | PVCZ canonical scheme is T×H = 50 zones, NOT T×H×W = 250 | **VERIFIED** | `pvcz` v0.3.0 npz `total_num_zones=50`; `zone_spec['pvcz']` lists 50 labels T1:H1 through T10:H5 | Corrects substrate memory + 19_PREREG ℙ₀; W is independent stressor, not multiplied into canonical label. See memo 20. |
+| CLM-052 | T-zone boundaries (°C, Arrhenius 1.1 eV rack-equivalent): [−10.3, 14, 19, 24, 29, 34, 39, 44, 49, 54, 67] | **VERIFIED** | Same, `limits['T_equiv_rack_1p1eV']` | Inner T2–T9 uniform 5 °C wide; T1 cold tail 24.3 °C wide; T10 hot tail 13 °C wide |
+| CLM-053 | H-zone boundaries (g/kg specific humidity mean): [0.7, 3.0, 4.1, 5.9, 10.5, 18.3] | **VERIFIED** | Same, `limits['specific_humidity_mean']` | Non-uniform: H1=2.3 wide, H2=1.1, H3=1.8, H4=4.6, H5=7.8 g/kg wide |
+| CLM-054 | PVCZ canonical activation energy is 1.1 eV (rack and roof variants both use 1.1 eV by default) | **VERIFIED** | Same, primary variable `T_equiv_rack_1p1eV` | Full Arrhenius sweep 0.1-2.1 eV (11 values) available in world stressors df for sensitivity analysis |
+| CLM-055 | PVCZ world stressors dataset: 230,742 land cells × 49 columns at 0.25°×0.25° (~28 km) global grid | **VERIFIED** | `PVCZ-2019_ver0p2_world_PV_climate_stressors_and_zones.pkl` df.shape | Direct lat/lon lookup for site-to-zone assignment |
+| CLM-056 | T-zone inner zones (T2–T9) uniform 5 °C wide; T1 and T10 span longer tails of global distribution | VERIFIED | Derived from CLM-052 boundaries | Decile-balanced design over inner zones |
+| CLM-057 | H4 (5.9–10.5 g/kg) is widest single H-zone at 4.6 g/kg; spans broad subtropical band | VERIFIED | Derived from CLM-053 boundaries | Failure-relevant: backsheet hydrolysis kinetics, PID-s susceptibility, junction-box water ingress |
+
+## OEDI PVDAQ alternate-path + rdtools install (extracted 2026-05-27 from S3 + git clone)
+
+| ID | Claim | Status | Cited source | Notes |
+|---|---|---|---|---|
+| CLM-058 | PVDAQ public lake @ `s3://oedi-data-lake/pvdaq/` has 1862 systems with pre-computed Karin PVCZ zone assignments (composite, t_rack, t_roof, humidity, wind) | **VERIFIED** | `PVDAQ_systems_20250729.csv` schema inspection | OEDI submission 4568, DOI 10.25984/1846021, CC-BY 4.0. See memo 22. |
+| CLM-059 | PVDAQ QA-passing systems with ≥0.5 yr coverage: 1564/1862 (84%) | **VERIFIED** | Direct CSV computation | |
+| CLM-060 | PVDAQ QA-passing with ≥5 yr coverage: 1288 systems | **VERIFIED** | Same | Longitudinal cohort feasibility |
+| CLM-061 | PVDAQ T-zone coverage: T1=8, T2=50, T3=506, T4=761, T5=217, T6=22, T7+=0 | **VERIFIED** | Same | **No T7-T10 (very hot) coverage** |
+| CLM-062 | PVDAQ H-zone coverage: H1=47, H2=152, H3=1291, H4=74, H5=0 | **VERIFIED** | Same | **No H5 (tropical) coverage** |
+| CLM-063 | PVDAQ has no tropical-humidity (H5) coverage | **VERIFIED** | Same | Coverage gap for tropical-equatorial degradation |
+| CLM-064 | PVDAQ has no high-temperature (T7-T10) coverage | **VERIFIED** | Same | Coverage gap for MENA/Sahel/Australia inland desert |
+| CLM-065 | PVDAQ systems-index CSV has no cell-architecture / module-arch field; only mounting (`type` / `tracking`) | **VERIFIED** | Schema inspection | Key gap for TOPCon cohort identification |
+| CLM-066 | PVDAQ `system_public_name` string search finds zero TOPCon / HJT / SHJ / PERC / Al-BSF labeled systems | **VERIFIED** | Direct string search across all 1862 rows | TOPCon cohort identification through PVDAQ index alone NOT feasible |
+| CLM-067 | PVDAQ license is CC-BY 4.0 | **VERIFIED** | OEDI submission 4568 page | Permits substrate-internal redistribution + paper-time citation |
+| CLM-068 | rdtools package (NREL, MIT license) cloned to `Solar/code/rdtools/`; modules include aggregation, analysis_chains, availability, bootstrap, clearsky_temperature, degradation, filtering, normalization, plotting, soiling | **VERIFIED** | Direct clone + ls | Operational role in 19_PREREG §14 Step 5 moment-flow computation |
+
 ## Köntges T13-09:2017 + Ilse 2019 + Jordan-Kurtz 2013 anchor-verified entries
 
 | ID | Claim | Status | Cited source | Notes |
@@ -123,6 +151,9 @@ These are new ledger entries surfaced by primary-source retrieval; they go beyon
 |---|---|---|---|---|
 | v1 | 2026-05-27 | 22 v0 claims | 5 parallel subagents | 5 attribution errors caught (ERR-1 through ERR-5); 13 VERIFIED, 8 PARTIAL, 12 CAN'T-VERIFY (WebFetch blocked) |
 | v2 | 2026-05-27 | Jordan 2016 Compendium + T13-30:2025 PVFS + T13-30:2025 REPORT EX-SUMM + Jordan 2022 fleet + 3 anchor PDF local-reads | 2 subagents + operator | ERR-2 CLOSED via Jordan 2016 (closes mis-attribution). ERR-5 CLOSED via Jordan 2022 at p<0.001 climate-temperature correlation. Karin 2019 PV-specific climate zones surface as new methodology. T13-30:2025 REPORT taxonomy expanded to 30 failure modes + new findings (TOPCon UVID, thin glass break 5-10%, IEC 62804-1:2025). 6 v0 claims VERIFIED via local PDF reads; 20+ new CLMs added. |
+| v3 | 2026-05-27 | Karin 2019 PVCZ literal threshold extraction via `pvcz` v0.3.0 package binary | operator (direct npz load) | Karin zone thresholds extracted. **Correction surfaced:** canonical PVCZ is T×H = 50 zones (NOT 250 as substrate memory + 19_PREREG had stated). 7 new VERIFIED CLMs (051-057). See memo `20_KARIN2019_THRESHOLDS_extracted.md`. 19_PREREG DEVIATION-log entry filed. |
+| v4 | 2026-05-27 | T13-30:2025 SLIDES retrieval + read | operator + WebFetch | 5-slide presentation read; 4th independent confirmation of ERR-4 closure (Köntges/Lin/Jahn). Triangulation memo. No new CLMs (all SLIDES claims already in ledger from EX-SUMM/REPORT FULL/PVFS). See memo 21. |
+| v5 | 2026-05-27 | OEDI PVDAQ alternate-path pull + rdtools clone | operator (curl S3 + git clone) | **DuraMAT blocker resolved via OEDI alternate.** 1862-system PVDAQ index CSV in hand with **pre-computed Karin PVCZ assignments**. **New gap surfaced:** PVDAQ index lacks cell-architecture field; TOPCon cohort identification needs S3 per-system JSON or manufacturer outreach. 11 new VERIFIED CLMs (058-068). rdtools cloned MIT-licensed. See memo 22. |
 
 ---
 

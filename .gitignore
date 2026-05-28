@@ -7,10 +7,14 @@ Battery/data/khan_2025/*
 !Battery/data/khan_2025/cell_conditions.csv
 
 # Solar substrate — downloaded papers + datasets (large + license-restricted PDFs)
-# Reproduction: see Solar/literature/02_CLAIMS_LEDGER.md + Solar/literature/07-18 verification memos for primary-source URLs
+# Reproduction: see Solar/literature/02_CLAIMS_LEDGER.md + Solar/literature/07-22 verification memos for primary-source URLs
 Solar/data/*
 !Solar/data/.gitkeep
 !Solar/data/raw/datasets/OSTI_1842958_metadata.csv
+
+# Solar substrate — vendor code clones (upstream MIT/BSD repos pulled for operational use)
+# Reproduction: see Solar/literature/22_PVDAQ_alternate_path_and_rdtools.md
+Solar/code/rdtools/
 
 # Python
 __pycache__/
