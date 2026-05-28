@@ -72,6 +72,42 @@ At `https://dkasolarcentre.com.au/download?location=alice-springs`:
 
 ---
 
+## 4b. DKA Alice Springs system catalog (operator-provided 2026-05-28) + Probe 4 selection
+
+Full active-system list (each ~200–300 MB CSV, 5-min interval + on-site weather, full history). **Files are 5-min native — no daily option; aggregate to daily in processing.**
+
+**★ CORE technology-controlled set (FIXED mount, 2008–2011 vintage — isolates technology, holds mounting+vintage):**
+
+| # | Brand | kW | Technology | Mount | Year |
+|---|---|---|---|---|---|
+| 10 | SunPower | 5.8 | mono-Si | Fixed | 2009 |
+| 12 | BP Solar | 5.1 | mono-Si | Fixed | 2008 |
+| 13 | Trina | 5.3 | mono-Si | Fixed | 2009 |
+| 18 | SunPower | 5.2 | mono-Si | Fixed | 2011 |
+| 19 | Sungrid | 5.0 | mono-Si | Fixed | 2010 |
+| 3 | BP Solar | 5.0 | poly-Si | Fixed (roof) | 2008 |
+| 11 | BP Solar | 5.0 | poly-Si | Fixed | 2008 |
+| 14 | Kyocera | 5.4 | poly-Si | Fixed | 2008 |
+| 20 | Sungrid | 5.0 | poly-Si | Fixed | 2010 |
+| 21 | Evergreen | 4.9 | poly-Si | Fixed | 2010 |
+| 7 | First Solar | 7.0 | CdTe | Fixed | 2008 |
+| 23 | Calyxo | 5.4 | CdTe | Fixed | 2010 |
+| 8 | Kaneka | 6.0 | a-Si | Fixed | 2008 |
+| 17 | Sanyo | 6.3 | HIT | Fixed | 2010 |
+
+→ mono-Si ×5, poly-Si ×5 (powered contrast), CdTe ×2, a-Si ×1, HIT ×1. ~3.8 GB.
+
+**Secondary (sub-studies, optional):**
+- **Orientation control:** 16A/16B/16C/16D — *same* BP poly-Si 2008 at North/Flat/East/West → vary azimuth/tilt, hold tech+vintage. Clean orientation-effect test.
+- **CIGS:** 9A Solibro 2017 (newer); discontinued CIGS (Solco 2009, Hanergy 2010) if long-record CIGS wanted.
+- **CPV:** 22 SolFocus 16.8kW dual-track 2010 (exotic; separate handling).
+- **Tracking confound study:** 1A/1B/2 (dual-track mono-Si) vs fixed mono-Si → mounting effect.
+- **Vintage/poly replication:** 24–37 (2012–2017 poly-Si fixed) for poly-Si vintage + newer-cohort comparison.
+
+**Skip:** #0 (aggregate of all sites — not per-system).
+
+**Probe 4 ℙ₀ (revised with real catalog):** cell-technology {mono-Si, poly-Si, CdTe, a-Si, HIT} × mount {Fixed} × vintage-band {2008-09, 2010-11}. Single site (Alice Springs) = climate fixed. mono/poly have n≥5 → the two-class contrast is the powered headline; thin-film/HIT are directional.
+
 ## 5. REQUIRED citation + attribution (DKA use terms)
 
 DKA Solar Centre data is open-access but carries a **mandatory citation requirement**. Any substrate result memo, pre-reg, or publication using DKA data **MUST** include:
