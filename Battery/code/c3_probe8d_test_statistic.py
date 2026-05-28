@@ -228,7 +228,7 @@ def main():
     print(f"PERMANOVA perms: {N_PERMS_PERMANOVA}; Classifier perms: {N_PERMS_CLASSIFIER}")
 
     rf_factory = lambda: RandomForestClassifier(n_estimators=500, max_depth=None, random_state=42, n_jobs=1)
-    lr_factory = lambda: LogisticRegression(multi_class='multinomial', solver='lbfgs', max_iter=1000, random_state=42)
+    lr_factory = lambda: LogisticRegression(solver='lbfgs', max_iter=2000, random_state=42)
 
     summary_rows = []
     for nl in N1_LEVELS:
