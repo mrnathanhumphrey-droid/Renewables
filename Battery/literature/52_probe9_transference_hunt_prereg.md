@@ -121,7 +121,8 @@ Headline = transference verdict at L2 for the PCA-k that maximizes transference 
 ---
 
 **Lock metadata:**
-- Lock commit: `<TBD — recorded in follow-up commit>`
-- Generator script SHA-256: `<TBD — recorded after build>`
-- Analyzer script SHA-256: `<TBD — recorded after build>`
-- Result parquet SHA-256: `<TBD — recorded with result>`
+- Lock commit: `288a7f8`
+- Generator script SHA-256: `a78d6d077c7b87edf016eb49e564abd828265f7899387d51e314d9531d217d82`
+- Analyzer script SHA-256: `14c4a3c3cea50f08da0a95feee3afe6df24e07a8475fb541abf775e655183654`
+- Result parquet SHA-256: `408cd681a13674d7dd589b17cc1a6b1e4d69442635628e655c7e71b915f290c1`
+- Result writeup: `literature/53_probe9_transference_hunt_result.md` — disposition TRANSFERENCE STILL NULL
