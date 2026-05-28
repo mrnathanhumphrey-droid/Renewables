@@ -1,6 +1,6 @@
 # Pre-Registration v1.0 — Evidence Discipline for the Solar Substrate
 
-**Locked at commit:** `[fill at commit]` on `main`.
+**Locked at commit:** `fc32be4` on `main`.
 **Status:** First lock. All downstream work in D:/Renewables/Solar/ inherits these rules.
 **Scope:** This is a META pre-reg. It does NOT lock a scientific hypothesis. It locks the DISCIPLINE under which scientific hypotheses get pre-registered, evidence is admitted, and claims are labeled.
 
@@ -207,6 +207,6 @@ No additional content claims may be added to this substrate without entering thr
 
 ---
 
-**Locked at commit:** `[fill at commit]` on `main` of `D:/Renewables/`.
+**Locked at commit:** `fc32be4` on `main` of `D:/Renewables/`.
 **Repository scope:** D:/Renewables/Solar/.
 **Author of v1.0 draft:** Claude (LLM) under §8 — every claim in this document is itself subject to §3 verification when the operator endorses or amends.

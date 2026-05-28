@@ -1,7 +1,7 @@
 # Pre-Registration v1.0 — TOPCon UVID Field-Cohort RMD-SRC Application
 
 **Status:** First scientific pre-reg in the Solar substrate. **Once committed, no edits permitted; deviations logged in §10.**
-**Locked at commit:** `[fill at commit]` on `main`.
+**Locked at commit:** `fc32be4` on `main`.
 **Builds on:**
 - `01_METAPREREG_v1.0_evidence_discipline.md` (evidence rules)
 - `03_RMDSRC_SOLAR_FRAMING_v0.md` (RMD-SRC × solar substrate mapping)
@@ -325,6 +325,6 @@ These downstream pre-regs may amend Karin 2019 PVCZ axes, the encapsulation taxo
 
 ---
 
-**Locked at commit:** `[fill at commit]` on `main`.
+**Locked at commit:** `fc32be4` on `main`.
 **Repository scope:** D:/Renewables/Solar/.
 **Author of v1.0 draft:** Claude (LLM) per meta-pre-reg §8 — every claim in this document is itself subject to operator endorsement and §3 verification when applied to field data.
