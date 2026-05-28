@@ -1,0 +1,30 @@
+{
+  "pvdaq_within_cell_sigma_plr": 2.4085424820473453,
+  "pvdaq_overall_sigma_plr": 2.4304681621891473,
+  "jordan_climate_effect": {
+    "zone_PLR": {
+      "T3": -0.48,
+      "T4": -0.78,
+      "T5": -0.88
+    },
+    "range_pct_yr": 0.4,
+    "sd_of_zone_means": 0.16996731711975951
+  },
+  "jordan_effect_at_pvdaq_sigma": {
+    "cohen_f": 0.0705685361112175,
+    "implied_eta2": 0.004955241590657075
+  },
+  "power_to_detect_jordan_effect": {
+    "n_total": 668,
+    "k_groups": 3,
+    "achieved_power": 0.35120851295142985
+  },
+  "mde_at_pvdaq_n": {
+    "cohen_f": 0.12036760205799774,
+    "eta2": 0.014281444915292367
+  },
+  "n_required_for_jordan_effect_at_pvdaq_sigma": 1937.707095075484,
+  "jordan_implied_within_cohort_sigma": 0.9882466810842684,
+  "heterogeneity_inflation_ratio": 2.4371875242776224,
+  "pvdaq_observed_eta2_Tzone": 0.01857895356431647
+}

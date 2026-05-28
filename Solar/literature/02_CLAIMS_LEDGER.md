@@ -144,6 +144,10 @@ These are substrate-generated empirical results (memo `24_RESULT_v1.0_FleetPLR_P
 | CLM-071 | PVCZ humidity zone explains η²=0.003 of PLR variance (p=0.42, null) | **VERIFIED-OWN** | Probe 2 result H5 CONFIRMED | Replicates Jordan 2022 humidity indeterminacy |
 | CLM-072 | Climate-PLR ordering (Jordan 2022) requires technology-controlled cohorts; heterogeneous public fleet (mixed cell-tech, residential rooftop) buries the ~0.4 %/yr climate effect under ~1.5-2 %/yr within-cell variance | **VERIFIED-OWN** | Probe 2 result §4, F_Fleet_2 fired | Boundary condition on Jordan 2022, NOT a refutation; lab-design lesson §8 |
 | CLM-073 | PVDAQ mounting metadata 98% UNKNOWN; tracking 1251:2 fleet-wide → roof/ground (H3) + tracker-null (H4) untestable in PVDAQ index | **VERIFIED-OWN** | Probe 2 result §1, H3/H4 INDETERMINATE | Metadata-completeness limit, not a physics finding |
+| CLM-074 | PVDAQ within-cell PLR σ = 2.41 %/yr; 2.44× Jordan 2022's back-solved within-cohort σ (0.99 %/yr) | **VERIFIED-OWN** | Probe 2b memo 25 §2 | Heterogeneity inflation quantified |
+| CLM-075 | At PVDAQ heterogeneity, power to detect Jordan's 0.40 %/yr climate effect at n=668 is 0.35; ~1938 systems needed for power 0.8 | **VERIFIED-OWN** | Probe 2b memo 25 §2 | FTestAnovaPower |
+| CLM-076 | Probe 2 H1 null is REFUTED-BY-UNDERPOWER (Type-II-prone), not "climate irrelevant"; the η²=0.019 PVDAQ saw is non-monotone/confounded, not Jordan's ordered effect | **VERIFIED-OWN** | Probe 2b memo 25 §3 | Sharpens H1 disposition |
+| CLM-077 | Technology-controlled climate test infeasible in PVDAQ: modules table (156 systems, cell-arch) has 0 overlap with 668 PLR cohort; only 17 mono/multi-Si qa-pass+years≥5 | **VERIFIED-OWN** | Probe 2b memo 25 §1 | Mechanism test needs external homogeneous cohort |
 
 ## Köntges T13-09:2017 + Ilse 2019 + Jordan-Kurtz 2013 anchor-verified entries
 
