@@ -127,6 +127,7 @@ All three run for L2 PRIMARY as the locked headline level; (B) reported at all f
 
 **Lock metadata:**
 - Lock commit: `d9dcdf6`
-- Analyzer script SHA-256: `<TBD — recorded after build>`
-- Result parquet SHA-256: `<TBD — recorded with result>`
-- Input parquet (8D, already locked in lit/53): `09c76cb21cf7a8a4065e1d0ce7d9e1a65a6c5617c561c7f19449d328616de850` (`pybamm_l9_trajectories_eis_v3.parquet`). 6D v2 SHA recorded at build time.
+- Analyzer script SHA-256: `5e73fb1091361f316ee10fe1df9f74c48fc22e077e99b65c814e27e34487f35a`
+- Result parquet SHA-256: `32507db6fcad52ff7254103dc7f2e4537d8a55d26861679d7cc64ce5312a93b7` (k-curve)
+- Result writeup: `literature/55_probe9b_component_decomposition_result.md` — disposition MECHANISM REAL BUT UNSTABLE
+- Input parquet (8D, already locked in lit/53): `09c76cb21cf7a8a4065e1d0ce7d9e1a65a6c5617c561c7f19449d328616de850` (`pybamm_l9_trajectories_eis_v3.parquet`).
