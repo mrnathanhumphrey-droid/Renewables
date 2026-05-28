@@ -72,4 +72,22 @@ At `https://dkasolarcentre.com.au/download?location=alice-springs`:
 
 ---
 
-**END — acquisition target. Resume: operator pulls DKA CSVs → `data/raw/dka/` → pre-reg + build Probe 4.**
+## 5. REQUIRED citation + attribution (DKA use terms)
+
+DKA Solar Centre data is open-access but carries a **mandatory citation requirement**. Any substrate result memo, pre-reg, or publication using DKA data **MUST** include:
+
+**General citation:**
+> Desert Knowledge Australia Centre. dd/mm/yyyy. Download Data. Alice Springs. http://dkasolarcentre.com.au/download, date accessed: dd/mm/yyyy.
+
+**Specific (per-array) citation:**
+> Desert Knowledge Australia Centre. dd/mm/yyyy. Download Data: Array ## Brand Name. Alice Springs. http://dkasolarcentre.com.au/download, date accessed: dd/mm/yyyy.
+
+(Fill `dd/mm/yyyy` with the data-publication date shown on the portal and the access date; list each Array ## + Brand actually used in the specific form.)
+
+**Courtesy notification:** DKA requests being notified of R&D outputs using their data — email `info@dkasolarcentre.com.au` with any publication/initiative.
+
+**Substrate rule:** Probe 4's pre-reg and result memos must carry the citation block above with the actual array list + access date recorded at pull time. Treat this as a hard requirement (same standing as the meta-pre-reg primary-source discipline) — log the array IDs + access date in `data/raw/dka/` alongside the CSVs so the specific citations are reproducible.
+
+---
+
+**END — acquisition target. Resume: operator pulls DKA CSVs → `data/raw/dka/` → pre-reg + build Probe 4. Citation block (§5) is MANDATORY in all DKA-derived outputs.**
