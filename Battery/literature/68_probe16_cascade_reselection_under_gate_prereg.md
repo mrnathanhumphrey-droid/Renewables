@@ -1,6 +1,6 @@
 # C3 Probe 16 — Full Cascade Re-Selection Under the Cross-Substrate-Primary Gate (Paper-3 deliverable) Pre-Registration
 
-**Status:** LOCKED 2026-05-29 at commit `<TBD>`. No Probe 16 re-selection/validation had fired at lock time. Scoping (re-ran the existing Gate I v2 + Gate II v2 read-only to read current attrition) done before drafting (§0.2).
+**Status:** LOCKED 2026-05-29 at commit `55beb41`. No Probe 16 re-selection/validation had fired at lock time. Scoping (re-ran the existing Gate I v2 + Gate II v2 read-only to read current attrition) done before drafting (§0.2).
 **Date drafted:** 2026-05-29
 **Authored:** Claude
 **Repo target on lock:** `Battery/literature/68_probe16_cascade_reselection_under_gate_prereg.md`
@@ -92,8 +92,8 @@ The procedure OUTPUT (the re-selected set) is determined by the data — it is N
 ---
 
 **Lock metadata:**
-- Lock commit: `<TBD>`
-- Analyzer SHA-256: `<TBD — filled in result commit>`
-- Result parquet SHA-256: `<TBD>`
+- Lock commit: `55beb41`
+- Analyzer SHA-256: `62a45d9c1052a00c06f08bf5bd186042d545ff7490911671df9e362d5fd17245`
+- Result parquet SHA-256: `a19f9527e98ed9844b1b9732bbc0e3006fcab542407c993b242a420bfef2a521`
 - Reused: `paper2_gate_I_v2_results.parquet`, `paper2_gate_II_v2_results.parquet`, `paper2_operators_*.parquet` (unchanged)
-- Result writeup: `literature/69_probe16_cascade_reselection_under_gate_result.md` — disposition `<TBD>`
+- Result writeup: `literature/69_probe16_cascade_reselection_under_gate_result.md` — disposition XS-GATE-YIELDS-TRANSFERABLE-CASCADE (re-selected {E1,C2} transfers F=3.72)
