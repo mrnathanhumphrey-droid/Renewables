@@ -1,6 +1,6 @@
 # C3 Probe 14 — GITT Superior Particle-Radius Operator: Multi-Seed Stability Promotion Pre-Registration
 
-**Status:** LOCKED 2026-05-29 at commit `<TBD>`. No Probe 14 analysis had fired at lock time. **Integrity disclosure (§0.3):** the GITT pr F=71.56 (L2) and EIS pr F=26.92 (L2) single-realization values are ALREADY KNOWN (Probe 10 lit/57 §3/§8). They are *anchors to be stress-tested*, NOT claims — the pre-registered tests below are the multi-seed robustness questions that have not been run.
+**Status:** LOCKED 2026-05-29 at commit `7fd0e44`. No Probe 14 analysis had fired at lock time. **Integrity disclosure (§0.3):** the GITT pr F=71.56 (L2) and EIS pr F=26.92 (L2) single-realization values are ALREADY KNOWN (Probe 10 lit/57 §3/§8). They are *anchors to be stress-tested*, NOT claims — the pre-registered tests below are the multi-seed robustness questions that have not been run.
 **Date drafted:** 2026-05-29
 **Authored:** Claude
 **Repo target on lock:** `Battery/literature/64_probe14_gitt_particle_radius_stability_prereg.md`
@@ -98,9 +98,9 @@ Probe 14 does **not** re-assert "GITT pr F≈72." It pre-registers whether that 
 ---
 
 **Lock metadata:**
-- Lock commit: `<TBD>`
-- Analyzer SHA-256: `<TBD — filled in result commit>`
-- Result parquet SHA-256: `<TBD>`
+- Lock commit: `7fd0e44`
+- Analyzer SHA-256: `06e4c54d3e060bbd457c85cb54a66f4ef24b9150b0d50cd5659cfc410364de7b`
+- Result parquet SHA-256: `4002412e258c3c565152d85e9f17f313b756190ee8b9a087369e8265b82a275e`
 - Reused GITT parquet SHA-256: `0851ff9fc39689131e5673e61cc3ef1f1b628c74ae1db7271bebf6d81ec9619e` (Probe 10, unchanged)
-- Reused EIS v3 parquet SHA-256: `<from lit/53>` (Probe 9, unchanged)
-- Result writeup: `literature/65_probe14_gitt_particle_radius_stability_result.md` — disposition `<TBD>`
+- Reused EIS v3 parquet SHA-256: `09c76cb21cf7a8a4065e1d0ce7d9e1a65a6c5617c561c7f19449d328616de850` (Probe 9, unchanged)
+- Result writeup: `literature/65_probe14_gitt_particle_radius_stability_result.md` — disposition GITT-PR-SUPERIOR (robust)
