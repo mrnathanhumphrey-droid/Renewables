@@ -1,6 +1,6 @@
 # C3 Probe 12 — Wide-Range (First+Second-Life) SOH Triage Pre-Registration
 
-**Status:** LOCKED 2026-05-28 at commit `<TBD>`. No Probe 12 extraction/analysis had fired at lock time. First-life `.mat` inspection (read-only, scipy) was done before drafting (see §0.1) — no features computed, no model run.
+**Status:** LOCKED 2026-05-28 at commit `b5e71c7`. No Probe 12 extraction/analysis had fired at lock time. First-life `.mat` inspection (read-only, scipy) was done before drafting (see §0.1) — no features computed, no model run.
 **Date drafted:** 2026-05-28
 **Authored:** Claude
 **Repo target on lock:** `Battery/literature/60_probe12_widerange_soh_triage_prereg.md`
@@ -123,10 +123,10 @@ This remains a **proof-of-concept on a thin real cohort**, not a deployment clai
 ---
 
 **Lock metadata:**
-- Lock commit: `<TBD>`
-- First-life extractor SHA-256: `<TBD>`
-- First-life parquet SHA-256: `<TBD>`
-- Analyzer SHA-256: `<TBD>`
-- Result parquet SHA-256: `<TBD>`
+- Lock commit: `b5e71c7`
+- First-life extractor SHA-256: `845e44df0d89244d83a1c350384d01f7a24be40d6f004316dfae003ae0665f87`
+- First-life parquet SHA-256: `17d66ecef02b1c7ad2181d18189565c4f5c302257cd4fc9a5b2c075f96cb50db`
+- Analyzer SHA-256: `9fb41ba8ef677a404089c5041954fd8172e350740628030b3be4508b9051116a`
+- Result parquet SHA-256: `9cfa5a5076560d4c046d28af9f35e9e6de37c3caf5765818a071538551273d31`
 - Reused second-life parquet SHA-256: `9dd867c532b86dd3058a719cb8bf2750f28decccadb935bb09f73d98323ca703` (from Probe 11, unchanged)
-- Result writeup: `literature/61_probe12_widerange_soh_triage_result.md` — disposition `<TBD>`
+- Result writeup: `literature/61_probe12_widerange_soh_triage_result.md` — disposition RANGE-INSUFFICIENT / FUNDAMENTAL NULL
