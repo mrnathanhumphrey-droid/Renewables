@@ -1,6 +1,6 @@
 # C3 Probe 13 — R_diff-Only / Contact-Normalized Transferable SOH Triage Pre-Registration
 
-**Status:** LOCKED 2026-05-29 at commit `<TBD>`. No Probe 13 analysis had fired at lock time. **Integrity disclosure (§0.3): one Probe-13-relevant quantity is ALREADY KNOWN** from a Probe 12 post-hoc diagnostic and is treated as a *calibration anchor*, NOT a confirmatory claim — the pre-registered hypotheses below are the genuinely untested ones.
+**Status:** LOCKED 2026-05-29 at commit `be6a5d0`. No Probe 13 analysis had fired at lock time. **Integrity disclosure (§0.3): one Probe-13-relevant quantity is ALREADY KNOWN** from a Probe 12 post-hoc diagnostic and is treated as a *calibration anchor*, NOT a confirmatory claim — the pre-registered hypotheses below are the genuinely untested ones.
 **Date drafted:** 2026-05-29
 **Authored:** Claude
 **Repo target on lock:** `Battery/literature/62_probe13_rdiff_transferable_soh_triage_prereg.md`
@@ -107,9 +107,9 @@ H13-ohmic is reported as a mechanistic finding under any disposition (it explain
 ---
 
 **Lock metadata:**
-- Lock commit: `<TBD>`
-- Analyzer SHA-256: `<TBD — filled in result commit>`
-- Result parquet SHA-256: `<TBD>`
+- Lock commit: `be6a5d0`
+- Analyzer SHA-256: `778c8c09d6787cb1a4be8649339ec624e45b53d9aa0925767831f2aafa12bd52`
+- Result parquet SHA-256: `dbfd983f94f37cc18d43616e580a8ce1679a4a4cc50c43e5d45fec10995234b9`
 - Reused first-life parquet SHA-256: `17d66ecef02b1c7ad2181d18189565c4f5c302257cd4fc9a5b2c075f96cb50db` (Probe 12, unchanged)
 - Reused second-life parquet SHA-256: `9dd867c532b86dd3058a719cb8bf2750f28decccadb935bb09f73d98323ca703` (Probe 11, unchanged)
-- Result writeup: `literature/63_probe13_rdiff_transferable_soh_triage_result.md` — disposition `<TBD>`
+- Result writeup: `literature/63_probe13_rdiff_transferable_soh_triage_result.md` — disposition SINGLE-SPLIT ARTIFACT
