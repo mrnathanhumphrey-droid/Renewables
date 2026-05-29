@@ -1,6 +1,6 @@
 # C3 Probe 15 — Cross-Substrate-as-Primary-Gate Redesign (Paper-3-equivalent) Pre-Registration
 
-**Status:** LOCKED 2026-05-29 at commit `<TBD>`. No Probe 15 analysis had fired at lock time. Scoping (read-only inspection of operator parquets + extractability map) was done before drafting (§0.2); no cascade was trained.
+**Status:** LOCKED 2026-05-29 at commit `4128561`. No Probe 15 analysis had fired at lock time. Scoping (read-only inspection of operator parquets + extractability map) was done before drafting (§0.2); no cascade was trained.
 **Date drafted:** 2026-05-29
 **Authored:** Claude
 **Repo target on lock:** `Battery/literature/66_probe15_crosssubstrate_primary_gate_prereg.md`
@@ -101,9 +101,9 @@ Per feature set ∈ {**{C2}** (matched baseline), **{E1,E2,C2}** (gated set)}:
 ---
 
 **Lock metadata:**
-- Lock commit: `<TBD>`
-- Analyzer SHA-256: `<TBD — filled in result commit>`
-- Result parquet SHA-256: `<TBD>`
+- Lock commit: `4128561`
+- Analyzer SHA-256: `8863541b92801df83fa82b0f26f4410d5f447606ba9e8f3f70c4081d7b86137d`
+- Result parquet SHA-256: `4c1d023b339a63c287d463748e7f3dd8401dd2512b455723a028dcdac55ab378`
 - Reused operator parquets: `paper2_operators_{khan,secl,zhang,wmg}.parquet` (unchanged)
 - Reference baseline: lit/35 C2-only(PyBaMM+Khan+Severson) WMG F=0.921, p=0.576 NULL
-- Result writeup: `literature/67_probe15_crosssubstrate_primary_gate_result.md` — disposition `<TBD>`
+- Result writeup: `literature/67_probe15_crosssubstrate_primary_gate_result.md` — disposition MATCHED-BASELINE-NOT-NULL (lit/35 cross-substrate NULL was a training-cohort artifact; C2 transfers when trained on real-EIS cohorts)
