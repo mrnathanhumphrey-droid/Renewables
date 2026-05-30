@@ -1,6 +1,6 @@
 # C3 Probe 19 — Single-Operator Promotion of `eta_8s_pulse_{363,400}` for SECL SOH: Bootstrap Stability Gate Pre-Registration
 
-**Status:** LOCKED 2026-05-30 at commit `<TBD>`. No Probe 19 analysis had fired at lock time. **Integrity disclosure (§0.3): the anchor 1D PERMANOVA F values are ALREADY KNOWN** from Probe 18's F4 falsifier (eta_8s_pulse_363 alone F=44.33; eta_8s_pulse_400 alone F=42.25 on the merged n=45 SECL cohort). They are *anchors to be stress-tested*, NOT claims — the pre-registered tests below concern resampling robustness, which has not been computed.
+**Status:** LOCKED 2026-05-30 at commit `cc1c6d5`. No Probe 19 analysis had fired at lock time. **Integrity disclosure (§0.3): the anchor 1D PERMANOVA F values are ALREADY KNOWN** from Probe 18's F4 falsifier (eta_8s_pulse_363 alone F=44.33; eta_8s_pulse_400 alone F=42.25 on the merged n=45 SECL cohort). They are *anchors to be stress-tested*, NOT claims — the pre-registered tests below concern resampling robustness, which has not been computed.
 **Date drafted:** 2026-05-30
 **Authored:** Claude
 **Repo target on lock:** `Battery/literature/72_probe19_pulse_singleop_promotion_prereg.md`
@@ -105,9 +105,9 @@ PERMANOVA core reused verbatim from `c3_probe11_soh_triage.py` / `c3_probe9_exte
 ---
 
 **Lock metadata:**
-- Lock commit: `<TBD>`
-- Analyzer SHA-256: `<TBD — filled in result commit>`
-- Result parquet SHA-256: `<TBD>`
+- Lock commit: `cc1c6d5`
+- Analyzer SHA-256: `4782e7065d045663cc62091ad13f6c1cbb108858da0f25bd6de9d9acdab57594`
+- Result parquet SHA-256: `c05240af98128446e84453d8c594a08c61214362926f20e3e69c0500fef0b4f2`
 - Reused pulse parquet SHA-256: `6e9765aa4102c2f6c63b4164f16c76dfcf522cf25b86d83b5460c35ef82eb60a` (Probe 18, unchanged)
 - Reused EIS+SOH parquet SHA-256: `9dd867c532b86dd3058a719cb8bf2750f28decccadb935bb09f73d98323ca703` (Probe 11, unchanged)
-- Result writeup: `literature/73_probe19_pulse_singleop_promotion_result.md` — disposition `<TBD>`
+- Result writeup: `literature/73_probe19_pulse_singleop_promotion_result.md` — disposition PULSE-OP-DOMINANCE-WASHES-OUT (cell-strat 2.5pct=6.7/4.4 < bar 10; paired pulse>EIS only 62-65% vs 97.5% bar; F=44 anchor was cell-composition artifact)
