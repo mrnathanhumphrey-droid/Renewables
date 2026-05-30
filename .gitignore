@@ -55,3 +55,7 @@ Solar/code/.secrets*
 !Solar/data/processed/probe6_pairwise_jaccard.csv
 !Solar/data/processed/probe6_consensus_days.csv
 !Solar/data/processed/probe7_sigma_atlas.csv
+!Solar/data/processed/probe6b_rain_precip.csv
+!Solar/data/processed/probe6b_K_rain_alignment.csv
+!Solar/data/processed/probe8_dka_recovery_dates_cache.csv
+!Solar/data/processed/probe8_fuzz_robustness.csv

@@ -153,9 +153,64 @@ Tracks 1 and 2 are the substrate's distinctive contributions. Track 3 is a repli
 
 | Item | Status |
 |---|---|
-| **WATCH-ITEM-1: RESOLVED 2026-05-30.** IEEE 11132652 (Meyers/Dufour/Ogut PVSC-53 2025) abstract retrieved via WebSearch — method is "time-dependent multi-periodic quantile model for marginal normalization, a linear regression model that predicts normalized power output based on neighboring systems, and a traditional binary classification algorithm." General anomaly detection; NO soiling-specific subsection, NO cleaning-event classification, NO set-based / synchrony / consensus operator. **V2 stays NOVEL-FRONTIER without caveat.** | RESOLVED |
-| Ferrada/Atacama 2021 paper DOI is partial ("DOI 10.1016/j.solmat.2021.111-prefix"); resolve to exact DOI when convenient | OPEN |
+| **WATCH-ITEM-1: RESOLVED 2026-05-30.** IEEE 11132652 (Meyers/Dufour/Ogut PVSC-53 2025) abstract retrieved via WebSearch — general anomaly detection, no overlap. | RESOLVED |
+| Ferrada/Atacama 2021 paper DOI is partial; resolve when convenient | OPEN |
 | Calyxo CdTe (DKA catalog #23) operator-pull for n=2 CdTe replication of V4 | OPEN (low priority) |
+| **Probe 8 DKA fuzz-robustness sweep** (±0/±1/±2/±3) to harden CLM-095/103 | OPEN (operator-prioritized 2026-05-30) |
+
+---
+
+## 8. SKEPTIC-PASS CORRECTIONS (2026-05-30)
+
+Operator entered cold-skeptic mode after V2/V3 probe push and identified gaps the verification round missed. Corrections folded into ledger CLMs 094, 095, 097, 101, 102, 103. Summary:
+
+### 8.1 Heinrich 2020 — adjacent prior art MISSED by initial verification agent
+
+**Heinrich, Meunier, Samé, Quéval, Darga, Oukhellou, Multon 2020. "Detection of cleaning interventions on photovoltaic modules with machine learning." Applied Energy 263:114642. DOI 10.1016/j.apenergy.2020.114642.** Per-system supervised ML on 3.5 mHz V/I/T electrical signals, 97% classification accuracy on n=1938 labeled examples, application context = standalone PV systems for rural electrification. Detects "wet cleaning interventions during daytime."
+
+**Distinction from V2:**
+- Heinrich: per-system, supervised, electrical signals, classifies "did a cleaning happen on this system"
+- V2: fleet-level, unsupervised, SRR-recovery dates, decomposes detected cleanings into natural/operational
+
+**Impact on V2 verification verdict:** **CLM-095 DOWNGRADED from NOVEL-FRONTIER to PARTIAL.** V2 remains methodologically distinct (different unit, supervision, signal) but the "no prior art on PV cleaning detection by ML" framing was wrong — Heinrich occupies that frontier explicitly. The verification agent searched for synchrony/Jaccard/K-consensus operators in PV but did not check the broader "ML for PV cleaning detection" line. This is the verification round's first found-by-skeptic miss.
+
+**Action:** Pull full Heinrich 2020 PDF when accessible; current sources (ScienceDirect / HAL / Semantic Scholar / pv-magazine summary) returned 403 or blocked. Substrate uses the WebSearch-surfaced abstract as documentary evidence; not LLM-summarized.
+
+### 8.2 Statistical strength of DKA K=13 crash — modest, not crushing
+
+CLM-095 reported "K=12-13 crash to 5-10% << baseline 15%." Honest binomial tests:
+- K=13: 2 of 42 rainy days, baseline 15.3% → one-sided p≈0.029 (significant; not crushing)
+- K=12: 5 of 51 rainy, baseline 15.3% → one-sided p≈0.14 (not significant alone)
+- Combined K=12+13: stronger but not pre-registered as a combined test
+
+**CLM-103 added** to record this honestly. Probe 8 (fuzz sweep) is the obvious robustness check.
+
+### 8.3 ±1 day fuzz NOT pre-registered
+
+Convention copied from Probe 5b (which actually used ±2 days). Not formally justified. Probe 8 will sweep ±0/±1/±2/±3 on DKA to show whether the K=13 crash is robust to the choice.
+
+### 8.4 MA K=17 "100% rain alignment" — statistically empty
+
+Probe 6b memo 34 reported MA K=17 at 100% alignment (3 of 3 rainy). Binomial test: baseline 70.9%, observed 3 of 3 → z=1.11, p≈0.27. NOT significant. **CLM-102 added** to record this honestly. The 100% number was descriptively true but interpretively meaningless.
+
+### 8.5 V2 "operational cleaning is uniform" scope limit was implicit
+
+L7 (CLM-101) flagged climate + operator conditionality. The skeptic-pass adds: V2 assumes operational cleaning is WHOLE-SITE-SINGLE-DAY. Real operators may clean zones/strings across days, in which case V2 misses the operational regime entirely and falsely reports "no operational regime." CLM-101 expanded.
+
+### 8.6 MA Jaccard 2.01× = borderline, not "generalizes"
+
+CLM-097 framing was too strong. 2× synchrony at residential rooftops with shared seasonal weather (pollen, leaf litter, snow events) is plausibly produced by shared environment alone, without any cleaning-related synchrony. Reframed CLM-097.
+
+### 8.7 Net impact on substrate publication tracks
+
+Track 1 (V2 methodology paper) is now meaningfully constrained:
+- Two-site demonstration: DKA strong, MA borderline + scope-limited
+- Adjacent prior art (Heinrich 2020) must be cited and distinguished
+- Fuzz sensitivity (Probe 8) must be reported
+- Whole-site-day operational assumption must be flagged as scope limit
+- Statistical reporting must use binomial p-values, not raw percentages
+
+None of these kill V2 as a methodology contribution, but they tighten the scope of the claim significantly. The substrate's verification round caught some things, missed others — the skeptic-pass caught what verification missed. Both are now in the ledger.
 
 ---
 

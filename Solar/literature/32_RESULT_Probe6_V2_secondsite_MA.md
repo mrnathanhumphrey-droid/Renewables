@@ -3,6 +3,8 @@
 **Status:** First substrate test of whether the V2 multi-system synchrony decomposition methodology (Probe 5d, CLM-094/095) generalizes beyond DKA Alice Springs.
 **Date:** 2026-05-30 (verification phase, follow-up to memo 31)
 **Substrate:** D:/Renewables/Solar/
+
+> **CORRECTION 2026-05-30 (skeptic pass):** This memo's "GENERALIZES" framing is too strong. Jaccard 2.01× at a residential cluster with shared seasonal weather (pollen, leaves, snow events) is plausibly produced by shared environment alone, without cleaning-related synchrony. See memo 31 §8.6 and CLM-097. Synchrony was DETECTED, but the substrate's "generalizes" framing in §6 reads stronger than the data supports. Read alongside skeptic-pass corrections in memo 31 §8.
 **Pre-decided hypothesis (before run):**
 - **H_SYNC:** if V2 methodology generalizes, pairwise SRR-recovery-event Jaccard among 21 co-located systems will be > random null
 - **H_SCALE:** if methodology is data-scale-insensitive, K-sweep shows the same monotone-rise-then-crash signature as DKA
