@@ -76,16 +76,21 @@ Probe 5d demonstrates that pairwise Jaccard + K-threshold consensus-day analysis
 
 ---
 
-## 4. Substrate-novel findings flagged for external verification (next session)
+## 4. Substrate-novel findings — VERIFICATION COMPLETE (2026-05-30)
 
-Substrate-novel = the substrate generated the finding; literature anchor not yet checked. Per meta-pre-reg discipline, these are **VERIFIED-OWN** but need external triangulation before deeper inference.
+External-literature verification round-1 closed. See memo `31_VERIFICATION_v1.0_substrate_novel_findings.md` for full per-finding detail (anchors, quotes, DOIs).
 
-| Finding | Memo | Verification target |
-|---|---|---|
-| **Wet-season DEPOSITION rate > dry-season at Alice Springs** (11/13, ratio 0.74×, p=0.998 opposite-direction) — "muddy soiling" mechanism | 29 §6c (CLM-093) | Atacama / Sahara / Mojave / Saudi soiling literature on rain-induced "cementation"; Ilse 2019 §discussion; Figgis Qatar papers |
-| **Multi-system synchrony separates natural from operational cleaning** at K-threshold | 29 §6d (CLM-094, 095) | NREL soiling-monitoring methodology papers; rdtools documentation on multi-system cohorts; any DKA-specific operational logs |
-| **2.0× σ_within inflation in heterogeneous fleet** (PVDAQ vs Jordan 2022) and **8× tightening in DKA homogeneous site** | 25 §4b (CLM-078); 28 §2 (CLM-083) | Jordan 2022 / Deceglie 2018 reported within-cohort SDs (back-solve check); any cross-fleet PV variance-decomposition paper |
-| **CdTe-low soiling (3.15%, lowest single-system at DKA)** — n=1 directional | 29 §3 (CLM-090) | First Solar / CdTe glass-coating literature; anti-soiling thin-film papers |
+| Finding | Memo / CLM | **Verdict** | Substrate impact |
+|---|---|---|---|
+| **V1** Wet-season DEPOSITION > dry-season at Alice Springs (muddy soiling) | 29 §6c / CLM-093 | **VERIFIED** (mechanism = prior art) | Reframe to "first explicit Australian-arid replication of established dew-cementation"; anchors: Figgis 2018 (Qatar palygorskite), Ilse 2019 (cementation after dew), Ferrada Atacama (salt cementation), Energies 2023 (light rain → muddy layer) |
+| **V2** Multi-system synchrony decomposes natural vs operational cleaning | 29 §6d / CLM-094, CLM-095 | **NOVEL-FRONTIER (HARDENED)** | Candidate primary publishable methodological artifact. Journal + conference sweep (PVSC 2022-25, EU-PVSEC, PVRW) found no prior art. Watch-item: IEEE 11132652 Meyers PVSC-53 2025 full-text check |
+| **V3** 2.0× σ_within heterogeneity inflation + 8× DKA homogeneous tightening | 25 §4b, 28 §2 / CLM-078, CLM-083 | **PARTIAL** (direction anchored, ratio novel) | Direction supported by Deceglie 2019 (residential 1.3 vs non-residential 0.8 %/yr mean PLR, n=503); no peer-reviewed σ_within numerical anchor — ratio itself is substrate-novel quantification frontier |
+| **V4** CdTe-low soiling at DKA M7 (3.15%) | 29 §3 / CLM-090 | **PARTIAL-VERIFIED** (directional) | CdTe<c-Si replicates in Morocco — Ammari 2022 (13% vs 15%), Tahri 2023 (23.2% vs 25.5%). **FS-proprietary-coating attribution dies** — lit attributes to surface chemistry / partial-shading response, not coating. Reframe as CdTe-class effect |
+
+**Three publication tracks emerge from verification:**
+1. **Methodology paper** (V2-led) — multi-system Jaccard + K-consensus as natural-vs-operational cleaning decomposition; PV-reliability venue
+2. **σ_within quantification paper** (V3-led) — first published heterogeneous vs homogeneous PV σ_within ratio; Deceglie 2019 direction anchor
+3. **DKA Alice Springs replication case study** (V1 + V4 + 5e time-stability) — wet>dry as headline
 
 ---
 
