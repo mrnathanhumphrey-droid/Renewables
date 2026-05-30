@@ -151,11 +151,11 @@ Tracks 1 and 2 are the substrate's distinctive contributions. Track 3 is a repli
 
 ## 7. Open items / watch-list
 
-| Item | What's needed |
+| Item | Status |
 |---|---|
-| **WATCH-ITEM-1:** IEEE 11132652 (Meyers/Dufour/Ogut PVSC-53 2025) full-text retrieval | If embedded cleaning-classification subsection exists, downgrade V2 to PARTIAL |
-| Ferrada/Atacama 2021 paper DOI is partial ("DOI 10.1016/j.solmat.2021.111-prefix"); resolve to exact DOI when convenient | One-line ledger correction |
-| Calyxo CdTe (DKA catalog #23) operator-pull for n=2 CdTe replication of V4 | Strengthens V4 from n=1 → n=2 directional |
+| **WATCH-ITEM-1: RESOLVED 2026-05-30.** IEEE 11132652 (Meyers/Dufour/Ogut PVSC-53 2025) abstract retrieved via WebSearch — method is "time-dependent multi-periodic quantile model for marginal normalization, a linear regression model that predicts normalized power output based on neighboring systems, and a traditional binary classification algorithm." General anomaly detection; NO soiling-specific subsection, NO cleaning-event classification, NO set-based / synchrony / consensus operator. **V2 stays NOVEL-FRONTIER without caveat.** | RESOLVED |
+| Ferrada/Atacama 2021 paper DOI is partial ("DOI 10.1016/j.solmat.2021.111-prefix"); resolve to exact DOI when convenient | OPEN |
+| Calyxo CdTe (DKA catalog #23) operator-pull for n=2 CdTe replication of V4 | OPEN (low priority) |
 
 ---
 

@@ -51,3 +51,6 @@ Solar/code/.secrets*
 !Solar/data/processed/probe5d_consensus_days.csv
 !Solar/data/processed/probe5d_pairwise_jaccard.csv
 !Solar/data/processed/probe5e_temporal_drift.csv
+!Solar/data/processed/probe6_recovery_dates.csv
+!Solar/data/processed/probe6_pairwise_jaccard.csv
+!Solar/data/processed/probe6_consensus_days.csv
