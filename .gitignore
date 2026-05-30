@@ -48,3 +48,5 @@ Solar/code/.secrets*
 !Solar/data/processed/probe5_dka_soiling.csv
 !Solar/data/processed/probe5b_rain_validation.csv
 !Solar/data/processed/probe5c_seasonal_soiling.csv
+!Solar/data/processed/probe5d_consensus_days.csv
+!Solar/data/processed/probe5d_pairwise_jaccard.csv

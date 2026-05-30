@@ -156,10 +156,54 @@ The net 3.87%/yr arises from the balance: faster wet-season deposition partially
 
 CLM-093 added.
 
+## 6d. Inter-system synchrony — splits natural vs operational cleaning (addendum, 2026-05-30)
+
+Site-design enables a uniquely strong test PVDAQ couldn't do: **all 13 DKA systems share one site**, so common-cause cleaners (rain, scheduled cleanings) should produce SYNCHRONIZED recovery events; per-system noise/local interventions shouldn't. Test: extract recovery dates per system, compute pairwise Jaccard similarity (±1 day fuzz) + consensus-day analysis (days where ≥K systems recover within ±1 d).
+
+**(1) Pairwise synchrony: STRONG**
+- 78 system pairs, Jaccard median **0.259** (mean 0.271, range 0.119–0.603)
+- Random-baseline Jaccard: **0.054**
+- **Observed = 4.78× random** — every pair above random; site shares cleaning events.
+
+**(2) Consensus-day rain alignment by K — TWO REGIMES emerge:**
+
+| K (≥ systems together) | n consensus days | rain-aligned % | lift vs baseline |
+|---|---|---|---|
+| 1 (any system) | 2254 | 16.8% | 1.10× |
+| 2 | 1434 | 18.5% | 1.21× |
+| 3 | 957 | 19.2% | 1.26× |
+| 4 | 682 | 20.8% | 1.36× |
+| 5 | 503 | 22.1% | 1.44× |
+| 6 | 382 | 22.3% | 1.45× |
+| 7 | 290 | 23.8% | 1.55× |
+| **8** | 222 | **25.2%** | **1.65×** ★ peak |
+| 9 | 160 | 23.8% | 1.55× |
+| 10 | 120 | 23.3% | 1.52× |
+| 11 | 76 | 25.0% | 1.63× |
+| **12** | 51 | **9.8%** | **0.64×** ↓ |
+| **13** (all) | 42 | **4.8%** | **0.31×** ↓↓ |
+
+**The pattern is a smoking gun for TWO distinct cleaning regimes:**
+
+- **K = 1–11: weather-driven**, rain alignment rises with consensus (consistent with rain events cleaning subsets of arrays in proportion to their geographic spread / shading / tilt). Peak at K=8: 25% rain-aligned, 1.65× baseline.
+- **K = 12–13: operational/scheduled**, rain alignment CRASHES (4.8% — *less than baseline* 15.3%) on the 42 days where essentially all 13 systems recover simultaneously. Plausibly manual cleaning campaigns at the DKA test site (it is a research facility — staff likely schedule site-wide cleanings, and the synchrony fingerprint is unmistakable).
+
+**Substrate-novel methodology:** inter-system synchrony of SRR recoveries **separates natural weather cleaning from operational/manual cleaning campaigns** in fleet-of-replicates soiling analysis. The SRR algorithm conflates both into the same `soiling_interval_summary`; the pairwise-synchrony + K-threshold consensus test partitions them. This is a tool for any future PV soiling-analytics work on multi-system single-site fleets.
+
+**Reconciles all three soiling sub-probes:**
+- 5b: per-system rain alignment 28% (modest 1.3× lift) — mix of regimes diluted
+- 5c: wet-season deposition > dry-season — natural deposition mechanism (muddy adhesion)
+- **5d: synchrony reveals 2 distinct cleaning sources** — natural (peaks at K=8 rain-aligned) + operational (K=12-13 NOT rain-aligned)
+
+The 3.87%/yr aggregate (Probe 5) is the net of: (a) faster wet-season deposition, (b) rain cleaning subsets of arrays, (c) ~42 manual site-wide cleanings over the 12-year span (~3.5/yr — plausible operational cadence).
+
+CLMs 094-095 added.
+
 ## 7. What's next
 
 - ~~Rain-event cross-validation~~ **DONE §6b (positive but modest).**
-- ~~Seasonal soiling pattern~~ **DONE §6c (surprise inversion).**
+- ~~Seasonal soiling pattern~~ **DONE §6c (surprise inversion: wet > dry deposition).**
+- ~~Inter-system synchrony~~ **DONE §6d (two regimes: natural + operational).**
 - **Cleaning-interval ROI** (applied): at 3.6%/yr soiling at Alice Springs, the economic case for manual cleaning at X-month intervals is now computable.
 - **Tech-controlled replication:** more CdTe + more HIT systems (the missing catalog #s 23 Calyxo, 8 Kaneka a-Si, 9A Solibro CIGS) would let us replicate the CdTe-low finding and add thin-film comparisons. Already-asked-for but not blocking.
 
