@@ -1,6 +1,6 @@
 # C3 Probe 20 — Noise-Robustness Audit of the Cross-Substrate-Gated {E1, C2} Cascade Pre-Registration
 
-**Status:** LOCKED 2026-05-30 at commit `<TBD>`. No Probe 20 analysis had fired at lock time. **Integrity disclosure (§0.3):** the clean (L0) WMG transfer F for {C2}, {E1,C2}, {E1,E2,C2} is ALREADY KNOWN from Probe 16/15. They are anchors to be stress-tested under noise, NOT claims — the pre-registered tests below concern noise-robustness, which is untested.
+**Status:** LOCKED 2026-05-30 at commit `c4acbd5`. No Probe 20 analysis had fired at lock time. **Integrity disclosure (§0.3):** the clean (L0) WMG transfer F for {C2}, {E1,C2}, {E1,E2,C2} is ALREADY KNOWN from Probe 16/15. They are anchors to be stress-tested under noise, NOT claims — the pre-registered tests below concern noise-robustness, which is untested.
 **Date drafted:** 2026-05-30
 **Authored:** Claude
 **Repo target on lock:** `Battery/literature/74_probe20_xsgated_cascade_noise_audit_prereg.md`
@@ -110,9 +110,9 @@ Per (level, feature_set) report median, 2.5/97.5 pct, ref p.
 ---
 
 **Lock metadata:**
-- Lock commit: `<TBD>`
-- Analyzer SHA-256: `<TBD — filled in result commit>`
-- Result parquet SHA-256: `<TBD>`
+- Lock commit: `c4acbd5`
+- Analyzer SHA-256: `221ee96c1d63d96449e05bf3af7a8053317f49c37861cf18bca0d1dc99c07d04`
+- Result parquet SHA-256: `b2190d4d63fc8decec1f6f524c28b6e4d002eae5d4e3b367d05708790097e4eb`
 - Reused operator parquets: `paper2_operators_{khan,secl,zhang,wmg}.parquet` (Probe 15/16, unchanged)
 - Reference baselines: Probe 16 lit/69 clean F values (3.72/3.22/3.82); lit/34 7-op cascade L2 F=3.19 (external reference)
-- Result writeup: `literature/75_probe20_xsgated_cascade_noise_audit_result.md` — disposition `<TBD>`
+- Result writeup: `literature/75_probe20_xsgated_cascade_noise_audit_result.md` — disposition NOISE-ROBUST ({E1,C2} at L2: median F=4.21, 2.5pct=2.60, p=0.0067; survives through L3)
