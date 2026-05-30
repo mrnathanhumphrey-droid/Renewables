@@ -114,9 +114,23 @@ This is *not* a soiling phenomenon — it's the same per-phase imbalance/loading
 
 ---
 
+## 6b. Rain-event cross-validation (addendum, 2026-05-30)
+
+Tested whether SRR's detected soiling-recovery events coincide with on-site rain (`Weather_Daily_Rainfall`, weather station 101). For each system, extracted recovery dates from SRR's `soiling_interval_summary`, computed % that have a rain day (≥ 1 mm) within ±2 days. Baseline: random recovery would hit a rain-aligned day 21.1% of the time (rain days = 8.0% of 6190-day weather span, ±2-day window inflates to 21.1%).
+
+| System | n_recoveries | rain-aligned % | lift vs baseline |
+|---|---|---|---|
+| All 13 | 117–241 each | 23.5–32.1% (median **28.0%**) | 1.11–1.52× (median **1.33×**) |
+
+**Key finding: 13/13 systems align above baseline.** Sign test on 13/13 above-baseline: binomial p ≈ **0.00012** — highly significant evidence the SRR-detected recoveries are NOT random with respect to rain. The mechanism is validated.
+
+**Honest read on magnitude:** lift is **modest (1.3×) not dramatic (10×+)**. Means rain IS a real driver of the detected sawtooth recoveries, but **not the only driver**. Other causes split the interval boundaries: sub-day cloud weather, inverter resets, slow/fast soiling regime transitions, and (at this arid site) possibly dust-storm events without rain. The 3.87% soiling estimate is mechanistically real (recoveries correlate with rain on every system) but the SRR algorithm's interval segmentation is noisier than pure rain-detection. Code: `code/probe5b_rain_validation.py`.
+
+CLM-092 added: SRR recovery events at DKA align with on-site rain at 28% median (vs 21% baseline), 13/13 systems above baseline (binomial p≈0.00012). Mechanism validated; lift modest (1.3×) — rain is one driver among several.
+
 ## 7. What's next
 
-- **Rain-event cross-validation:** WeatherStation file has `Weather_Daily_Rainfall` — can validate that the SRR-detected soiling-recovery events coincide with actual rain. Quick check, would strengthen the result.
+- ~~Rain-event cross-validation~~ **DONE §6b above (positive but modest).**
 - **Cleaning-interval ROI** (applied): at 3.6%/yr soiling at Alice Springs, the economic case for manual cleaning at X-month intervals is now computable.
 - **Tech-controlled replication:** more CdTe + more HIT systems (the missing catalog #s 23 Calyxo, 8 Kaneka a-Si, 9A Solibro CIGS) would let us replicate the CdTe-low finding and add thin-film comparisons. Already-asked-for but not blocking.
 

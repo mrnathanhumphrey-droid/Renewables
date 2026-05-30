@@ -162,6 +162,7 @@ These are substrate-generated empirical results (memo `24_RESULT_v1.0_FleetPLR_P
 | CLM-089 | Mount effect on DKA soiling: fixed (3.62%) ≈ single-track (3.66%) < dual-track (4.93%, partly per-phase artifact) | **VERIFIED-OWN (directional)** | Probe 5 memo 29 §3 | Trackers slightly higher even after per-phase trim |
 | CLM-090 | CdTe (M7 First Solar) at 3.15% is lowest single-system soiling at DKA — possibly anti-soiling glass / surface coating; n=1, needs replication | **VERIFIED-OWN (n=1)** | Probe 5 memo 29 §3 | Replicate via missing catalog #23 Calyxo if obtained |
 | CLM-091 | Per-phase tracker data unreliability persists in soiling estimates (M2_A 9.31% vs M2_C 3.32% same system) — phase-combined files required | **VERIFIED-OWN** | Probe 5 memo 29 §4 | Same artifact as Probe 4 §3 carried into soiling |
+| CLM-092 | SRR recovery events at DKA align with on-site rain at 28% median (vs 21% baseline) — 13/13 systems above baseline (binomial p≈0.00012); lift 1.3× = modest but mechanism validated | **VERIFIED-OWN** | Probe 5 memo 29 §6b | Rain is one cleaning driver among several (also dust-storms, regime shifts) |
 
 ## Köntges T13-09:2017 + Ilse 2019 + Jordan-Kurtz 2013 anchor-verified entries
 

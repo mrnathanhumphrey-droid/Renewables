@@ -46,3 +46,4 @@ Thumbs.db
 .nsrdb_key
 Solar/code/.secrets*
 !Solar/data/processed/probe5_dka_soiling.csv
+!Solar/data/processed/probe5b_rain_validation.csv
