@@ -128,9 +128,38 @@ Tested whether SRR's detected soiling-recovery events coincide with on-site rain
 
 CLM-092 added: SRR recovery events at DKA align with on-site rain at 28% median (vs 21% baseline), 13/13 systems above baseline (binomial p≈0.00012). Mechanism validated; lift modest (1.3×) — rain is one driver among several.
 
+## 6c. Seasonal soiling pattern (addendum, 2026-05-30) — SURPRISE INVERSION
+
+Naive prediction (rain-driven cleaning + dry-season dust mobilization): dry-season (Jun-Aug) soiling RATE should be HIGHER than wet-season (Dec-Feb). Tested by extracting SRR intervals across 13 systems, classifying each by mid-date season, comparing daily-loss rates (PR decline per day during the soiling phase).
+
+**Result is the OPPOSITE direction:**
+
+| Season | n_intervals | Mean %/day | Median %/day |
+|---|---|---|---|
+| Wet (Dec-Feb) | 238 | 0.309 | **0.173** |
+| Transitional | 402 | 0.237 | 0.166 |
+| Dry (Jun-Aug) | 162 | 0.226 | **0.128** |
+
+- Mann-Whitney one-sided (dry > wet): p=0.9996 → predicted direction strongly rejected
+- Paired per-system: **11/13 systems have wet > dry** (binomial p=0.9983 opposite direction)
+- Median dry/wet ratio: **0.74×** — dry-season soiling rate is 26% LOWER than wet
+
+**Plausible mechanism:** This is consistent with **"muddy soiling"** (Ilse 2019 noted intermittent light rain can leave residue rather than clean) — wet-season rain may *wet* dust into adherent mud rather than washing it off, AND wet season at Alice Springs coincides with summer dust-storm activity (heated land → more dust mobilization). Dry season has no rain at all → dust deposition reaches a slower equilibrium without wet-adhesion enhancement.
+
+**Reconciliation with Probe 5b (rain alignment):** Both findings stand and explain the 3.87% net:
+- 5b: rain events DO drive cleaning recoveries (13/13 above baseline, p≈0.00012) — confirmed
+- 5c: wet-season deposition is FASTER than dry-season (11/13, p≈0.001 opposite-direction) — surprise
+
+The net 3.87%/yr arises from the balance: faster wet-season deposition partially offset by wet-season cleaning events. Dry season is the slow-equilibrium regime.
+
+**Substrate-novel finding:** the naive "arid = no cleaning = high soiling" intuition is **wrong for Alice Springs specifically** — wet-season is the higher-deposition regime. This has direct lab/operational implications: cleaning intervals optimized for "post-wet-season" may capture the bulk of annual losses, vs the naive prescription of dry-season cleaning.
+
+CLM-093 added.
+
 ## 7. What's next
 
-- ~~Rain-event cross-validation~~ **DONE §6b above (positive but modest).**
+- ~~Rain-event cross-validation~~ **DONE §6b (positive but modest).**
+- ~~Seasonal soiling pattern~~ **DONE §6c (surprise inversion).**
 - **Cleaning-interval ROI** (applied): at 3.6%/yr soiling at Alice Springs, the economic case for manual cleaning at X-month intervals is now computable.
 - **Tech-controlled replication:** more CdTe + more HIT systems (the missing catalog #s 23 Calyxo, 8 Kaneka a-Si, 9A Solibro CIGS) would let us replicate the CdTe-low finding and add thin-film comparisons. Already-asked-for but not blocking.
 
