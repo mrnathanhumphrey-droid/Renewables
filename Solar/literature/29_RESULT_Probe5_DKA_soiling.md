@@ -199,11 +199,32 @@ The 3.87%/yr aggregate (Probe 5) is the net of: (a) faster wet-season deposition
 
 CLMs 094-095 added.
 
+## 6e. Temporal drift over 12 years — NULL (regime is structurally stable, addendum)
+
+Climate-change angle: has Alice Springs dust regime measurably shifted over the 12-year DKA record? Per-system linear regression of annual mean daily soiling rate vs year, on 137 (system × year) observations (≥3 intervals per cell required).
+
+| Test | Result |
+|---|---|
+| Per-system slopes (n=13) | **0/13 statistically significant** (all p > 0.10, min p=0.115) |
+| Sign test on slopes | 6 positive / 7 negative (binomial p = 1.0) |
+| Pooled regression (137 obs) | slope = +0.00384 %/day/yr, **p = 0.31 (NS)** |
+| Grand-median yearly slope | −0.00147 %/day/yr, **p = 0.81 (NS)** |
+
+Yearly grand-medians bounce 0.13–0.37 %/day around the 0.24 site mean — significant interannual variability (CoV ~30%, e.g., 2016 0.37, 2022 0.36 — both years coincide with documented Alice Springs dust events) but **no temporal trend**.
+
+**Verdict: Alice Springs soiling rate is structurally STABLE 2013–2026.** No climate-change signal in dust deposition rate over this window. Useful null:
+- The 3.87%/yr baseline is **time-robust** → cleaning ROI calculations using it are durable; no need to refresh the soiling model annually.
+- Big year-to-year variability is interannual noise (specific dust events), not trend.
+- For lab-design: a single multi-year soiling rate is a defensible site characteristic; doesn't need rolling re-estimation.
+
+CLM-096 added.
+
 ## 7. What's next
 
 - ~~Rain-event cross-validation~~ **DONE §6b (positive but modest).**
 - ~~Seasonal soiling pattern~~ **DONE §6c (surprise inversion: wet > dry deposition).**
 - ~~Inter-system synchrony~~ **DONE §6d (two regimes: natural + operational).**
+- ~~Temporal drift over 12 yr~~ **DONE §6e (NULL — regime stable, baseline durable).**
 - **Cleaning-interval ROI** (applied): at 3.6%/yr soiling at Alice Springs, the economic case for manual cleaning at X-month intervals is now computable.
 - **Tech-controlled replication:** more CdTe + more HIT systems (the missing catalog #s 23 Calyxo, 8 Kaneka a-Si, 9A Solibro CIGS) would let us replicate the CdTe-low finding and add thin-film comparisons. Already-asked-for but not blocking.
 
