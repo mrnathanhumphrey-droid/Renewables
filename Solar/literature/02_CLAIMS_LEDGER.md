@@ -152,6 +152,11 @@ These are substrate-generated empirical results (memo `24_RESULT_v1.0_FleetPLR_P
 | CLM-079 | rdtools SRR soiling on PVDAQ daily-energy+NSRDB PI returns implausible 13-19% losses (vs Ilse 3-7%), wide CIs, frequent NoValidIntervalError | **VERIFIED-OWN** | Probe 3 memo 26 §1 | Soiling signal below daily-PI noise floor |
 | CLM-080 | Soiling (within-year sawtooth) NOT extractable from PVDAQ residential daily-energy, though PLR (multi-year YoY trend) is — expected signal-scale ordering vs 32% noise floor | **VERIFIED-OWN** | Probe 3 memo 26 §2 | Probe 3 FEASIBILITY-NULL |
 | CLM-081 | PVDAQ has 0 analyzable H1 (truly-arid) systems → Ilse aridity-soiling prediction untestable on PVDAQ regardless | **VERIFIED-OWN** | Probe 3 memo 26 §3 | Needs external arid-site data |
+| CLM-082 | DKA Alice Springs 13-system fleet median PLR = −0.91 %/yr (5–13 yr measured-POA spans) — replicates Jordan/PVDAQ magnitude on arid single-tech-controlled site | **VERIFIED-OWN** | Probe 4 memo 28 §0 | Third independent replication of fleet-PLR magnitude |
+| CLM-083 | DKA fixed-mount σ_within (n=6) ≈ 0.23 %/yr — **8× tighter than PVDAQ heterogeneous fleet (1.99 %/yr)** | **VERIFIED-OWN** | Probe 4 memo 28 §2 | Validates Probe 2b's homogeneity-dividend prediction quantitatively |
+| CLM-084 | DKA fixed-mount tech ordering: HIT (−0.80) ≤ mono-Si (−0.91) ≤ CdTe (−0.96) < poly-Si (−1.14) %/yr — consistent with PV literature | **VERIFIED-OWN (directional, n=1/tech)** | Probe 4 memo 28 §2 | Powered comparison needs more replicates per tech |
+| CLM-085 | Per-phase data for 3-phase tracker systems gives unreliable per-system PLR (same-system phase splits diverge by >1 %/yr) — phase-combined files give sensible PLR | **VERIFIED-OWN** | Probe 4 memo 28 §3 | Methodological flag for tracker analysis |
+| CLM-086 | DKA on-site Radiation_Global_Tilted + 5-min cadence enables clean PLR computation without NSRDB; arid-site soiling extraction now feasible | **VERIFIED-OWN** | Probe 4 memo 28 §4 | Unblocks queued soiling probe (Probe 3 attempted on PVDAQ failed; DKA opens it) |
 
 ## Köntges T13-09:2017 + Ilse 2019 + Jordan-Kurtz 2013 anchor-verified entries
 

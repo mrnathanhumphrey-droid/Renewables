@@ -19,6 +19,7 @@ Solar/data/processed/*
 !Solar/data/processed/probe2_plr_results_clean.csv
 !Solar/data/processed/probe2_verdicts.json
 !Solar/data/processed/probe2b_detectability.json
+!Solar/data/processed/probe4_dka_plr.csv
 
 # Solar substrate — vendor code clones (upstream MIT/BSD repos pulled for operational use)
 # Reproduction: see Solar/literature/22_PVDAQ_alternate_path_and_rdtools.md
