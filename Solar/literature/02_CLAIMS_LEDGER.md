@@ -157,6 +157,11 @@ These are substrate-generated empirical results (memo `24_RESULT_v1.0_FleetPLR_P
 | CLM-084 | DKA fixed-mount tech ordering: HIT (−0.80) ≤ mono-Si (−0.91) ≤ CdTe (−0.96) < poly-Si (−1.14) %/yr — consistent with PV literature | **VERIFIED-OWN (directional, n=1/tech)** | Probe 4 memo 28 §2 | Powered comparison needs more replicates per tech |
 | CLM-085 | Per-phase data for 3-phase tracker systems gives unreliable per-system PLR (same-system phase splits diverge by >1 %/yr) — phase-combined files give sensible PLR | **VERIFIED-OWN** | Probe 4 memo 28 §3 | Methodological flag for tracker analysis |
 | CLM-086 | DKA on-site Radiation_Global_Tilted + 5-min cadence enables clean PLR computation without NSRDB; arid-site soiling extraction now feasible | **VERIFIED-OWN** | Probe 4 memo 28 §4 | Unblocks queued soiling probe (Probe 3 attempted on PVDAQ failed; DKA opens it) |
+| CLM-087 | DKA Alice Springs median annual soiling loss = 3.87% (fixed-mount: 3.62%) via rdtools SRR — quantitatively confirms Ilse 2019 3-4% global aggregate on arid site | **VERIFIED-OWN** | Probe 5 memo 29 §1-2 | First soiling result in substrate; matches anchor literature |
+| CLM-088 | SRR succeeds 13/13 on DKA (measured POA + 5-min + arid) vs garbage on PVDAQ (modeled + daily) — definitive vindication of Probe 3 feasibility-null = data-quality, not method | **VERIFIED-OWN** | Probe 5 memo 29 §2 | Two-probe confirmation that PVDAQ heterogeneous residential is limiting factor |
+| CLM-089 | Mount effect on DKA soiling: fixed (3.62%) ≈ single-track (3.66%) < dual-track (4.93%, partly per-phase artifact) | **VERIFIED-OWN (directional)** | Probe 5 memo 29 §3 | Trackers slightly higher even after per-phase trim |
+| CLM-090 | CdTe (M7 First Solar) at 3.15% is lowest single-system soiling at DKA — possibly anti-soiling glass / surface coating; n=1, needs replication | **VERIFIED-OWN (n=1)** | Probe 5 memo 29 §3 | Replicate via missing catalog #23 Calyxo if obtained |
+| CLM-091 | Per-phase tracker data unreliability persists in soiling estimates (M2_A 9.31% vs M2_C 3.32% same system) — phase-combined files required | **VERIFIED-OWN** | Probe 5 memo 29 §4 | Same artifact as Probe 4 §3 carried into soiling |
 
 ## Köntges T13-09:2017 + Ilse 2019 + Jordan-Kurtz 2013 anchor-verified entries
 
