@@ -1,0 +1,16 @@
+n,median,iqr,sigma,sigma_iqr,cohort,source,note
+561,-0.9330100018348442,1.7996151874448283,1.410223804396148,1.3340364621533198,"PVDAQ ALL (full fleet, mixed mount/track/tech/vintage)",Probe 2,
+0,,,,,PVDAQ residential roof (mount=roof),Probe 2 stratified,matches Deceglie 2019 'residential' stratum
+0,,,,,PVDAQ ground-mount (mount=ground),Probe 2 stratified,matches Deceglie 2019 'non-residential' direction
+561,-0.9330100018348442,1.7996151874448283,1.410223804396148,1.3340364621533198,"PVDAQ fixed-mount (track=fixed, n large)",Probe 2 stratified,
+0,,,,,PVDAQ tracking (track=tracking),Probe 2 stratified,small n; nominal Jordan 2022 tracker-null reference
+266,-0.7838512703647771,1.650467597889379,1.3018869399919382,1.2234748687096955,PVDAQ within PVCZ T3,Probe 2 stratified,within-climate-zone homogeneity (still heterogeneous in tech/mount)
+201,-1.0451992618819794,1.9311283486594755,1.49134498407258,1.4315258329573577,PVDAQ within PVCZ T4,Probe 2 stratified,within-climate-zone homogeneity (still heterogeneous in tech/mount)
+94,-0.988195748514209,1.7934729191461765,1.4837219609197758,1.3294832610423843,PVDAQ within PVCZ T5,Probe 2 stratified,within-climate-zone homogeneity (still heterogeneous in tech/mount)
+157,-0.728584400854615,1.751703270783328,1.3860235569296788,1.2985198449098059,PVDAQ 10-25kW capacity bucket,Probe 2 stratified,size-correlates-with-O&M sophistication
+304,-1.0447223341444936,1.9075865474656537,1.427166724327229,1.4140745348151622,PVDAQ 5-10kW capacity bucket,Probe 2 stratified,size-correlates-with-O&M sophistication
+88,-0.9891098204298694,1.5023644055699203,1.3099653139821614,1.1136874763305562,PVDAQ <5kW capacity bucket,Probe 2 stratified,size-correlates-with-O&M sophistication
+13,-0.9116175358570504,0.3398329131315976,0.4937171756124135,0.2519146872732376,"DKA Alice Springs ALL (single site, multi-tech)",Probe 4,
+5,-0.9440606827043064,0.051954682960133614,0.12247775621252975,0.03851347884368689,DKA Alice Springs fixed-mount only,Probe 4 stratified,homogeneous-site x homogeneous-mount = HOMOGENEITY CEILING
+10,-0.9109895931010661,0.5806260066452881,0.5643246229334459,0.4304121620795316,DKA c-Si only (mono + poly),Probe 4 stratified,single-tech narrow
+2,,,,,DKA c-Si fixed-mount only (intersect),Probe 4 stratified,TIGHTEST cohort — both axes locked
