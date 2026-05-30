@@ -1,6 +1,6 @@
 # C3 Probe 18 — Real-Cell HPPC-Pulse Operators on SECL: Port of the P14 GITT-Class Win to Real Cells Pre-Registration
 
-**Status:** LOCKED 2026-05-30 at commit `<TBD>`. No Probe 18 extraction/analysis had fired at lock time. Feasibility (§0.2) verified read-only on 3 sample pulse xlsx files.
+**Status:** LOCKED 2026-05-30 at commit `497047b`. No Probe 18 extraction/analysis had fired at lock time. Feasibility (§0.2) verified read-only on 3 sample pulse xlsx files.
 **Date drafted:** 2026-05-30
 **Authored:** Claude
 **Repo target on lock:** `Battery/literature/70_probe18_secl_hppc_pulse_operators_prereg.md`
@@ -100,10 +100,10 @@ Per pulse pair (discharge step + charge step at each SOC level) → average the 
 ---
 
 **Lock metadata:**
-- Lock commit: `<TBD>`
-- Extractor SHA-256: `<TBD>`
-- Pulse parquet SHA-256: `<TBD>`
-- Analyzer SHA-256: `<TBD>`
-- Result parquet SHA-256: `<TBD>`
+- Lock commit: `497047b`
+- Extractor SHA-256: `889dff5ab1d2f98b310e07f63d439046c5f01bf4049d748f851733a8e4de0b16`
+- Pulse parquet SHA-256: `6e9765aa4102c2f6c63b4164f16c76dfcf522cf25b86d83b5460c35ef82eb60a`
+- Analyzer SHA-256: `e6ee89ca152ada8189915157343c2b58329b846ec22213d61bbcedad694c1191`
+- Result parquet SHA-256: `597f8adbf70d118bcb7690427930104421e32c609ca3a896d9940a2a76dbcda7`
 - Reused EIS+SOH parquet SHA-256: `9dd867c532b86dd3058a719cb8bf2750f28decccadb935bb09f73d98323ca703` (Probe 11, unchanged)
-- Result writeup: `literature/71_probe18_secl_hppc_pulse_operators_result.md` — disposition `<TBD>`
+- Result writeup: `literature/71_probe18_secl_hppc_pulse_operators_result.md` — disposition PULSE-OPS-REDUNDANT (locked); F4 surfaces single-operator dominance (eta_8s 1D F=44 > EIS cascade F=25), P14 GITT-class ports in single-op form
