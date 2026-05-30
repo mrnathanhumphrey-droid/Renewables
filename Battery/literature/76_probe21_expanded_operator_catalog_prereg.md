@@ -1,6 +1,6 @@
 # C3 Probe 21 — Expanded Operator Catalog Under the Cross-Substrate-Primary Gate Pre-Registration
 
-**Status:** LOCKED 2026-05-30 at commit `<TBD>`. No Probe 21 extraction/analysis had fired at lock time. Feasibility (§0.2) verified read-only — full EIS spectra are available on disk for all real-EIS cohorts (WMG, Khan, SECL first-life, SECL second-life) but the existing operator catalog uses only R_ohmic + R_diff endpoints, discarding 58/60 mid-frequency points per WMG spectrum.
+**Status:** LOCKED 2026-05-30 at commit `ddcb429`. No Probe 21 extraction/analysis had fired at lock time. Feasibility (§0.2) verified read-only — full EIS spectra are available on disk for all real-EIS cohorts (WMG, Khan, SECL first-life, SECL second-life) but the existing operator catalog uses only R_ohmic + R_diff endpoints, discarding 58/60 mid-frequency points per WMG spectrum.
 **Date drafted:** 2026-05-30
 **Authored:** Claude
 **Repo target on lock:** `Battery/literature/76_probe21_expanded_operator_catalog_prereg.md`
@@ -110,10 +110,13 @@ The existing {E1, C2} clean WMG transfer F=3.72 (Probe 16) and L2 noise-robust m
 ---
 
 **Lock metadata:**
-- Lock commit: `<TBD>`
-- Extractor SHA-256: `<TBD>`
-- Augmented parquets SHA-256: `<TBD>`
-- Analyzer SHA-256: `<TBD>`
-- Result parquet SHA-256: `<TBD>`
+- Lock commit: `ddcb429`
+- Extractor SHA-256: `38597c7ec27422c70b7402cdc7c35bc7c03913cb4625d5338322803929fd26f7`
+- Analyzer SHA-256: `f8350043585d31fc1647abc41478d3f4904202c167387801e3b66291dbe1de1d`
+- Augmented parquets SHA-256:
+  - khan_v2: `d7e9da2acd5762a60245725371814431204b71a2e59202027f45bf6a9e5e9d63`
+  - wmg_v2:  `13f30d214cf5f05f71020c494f80352259cbd3e4812c018ff566c4c3ecaa7783`
+  - secl_v2: `f5eb19315d5ad5a38198eb16ec1f77d617fecb785d7b1fa8365c73ca66c03e44`
+- Result parquet SHA-256: `9c7a15091a6ba15d10082f9fdbad37c21873c4e7b242037ae8b14813a83370e4`
 - Reused (unchanged) baseline parquets: `paper2_gate_I_v2_results.parquet`, `paper2_gate_II_v2_results.parquet`, `paper2_operators_*.parquet` (for 12-op baselines)
-- Result writeup: `literature/77_probe21_expanded_operator_catalog_result.md` — disposition `<TBD>`
+- Result writeup: `literature/77_probe21_expanded_operator_catalog_result.md` — disposition EXPANDED-GATE-IMPROVES (re-selected {E1,C2,W1,W3,W5}; WMG clean F=5.70 vs P16 baseline 3.72; L2-noise F=6.04)
