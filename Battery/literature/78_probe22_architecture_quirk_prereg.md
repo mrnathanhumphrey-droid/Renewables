@@ -120,8 +120,9 @@ Probe 22 does NOT re-claim A0's transfer F; that's an anchor. The new claims are
 
 ---
 
-**Lock metadata (to be filled at lock):**
-- Lock commit: `<TBD>`
-- Analyzer SHA-256: `<TBD>`
-- Result parquet SHA-256: `<TBD>`
-- Result writeup: `literature/79_probe22_architecture_quirk_result.md` — disposition `<TBD>` after run.
+**Lock metadata:**
+- Lock commit: `79c1025`
+- Pushed: 2026-05-30
+- Analyzer SHA-256: `41272350490e9c8565e9d35f08924839c6b33a38a64e509a7a0c7d14a29e9618`
+- Result parquet SHA-256: `686d7b20dc51b4b6f5cb3c73ef51ab8a9a5434e4019561eb9599f474be7886fe`
+- Result writeup: `literature/79_probe22_architecture_quirk_result.md` — disposition **ARCHITECTURE-SUBOPTIMAL** (A5_COSINE wins: median F=8.935 vs A0 5.703, +57%; F5 single-op check PASS).
